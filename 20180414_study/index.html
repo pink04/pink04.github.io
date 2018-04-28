@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BRACKETS 으로 시작하기</title>
+        <meta name="description" content="Brackets에 대한 대화식 시작 안내서입니다.">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body> 
+        <div class="box-1">
+            <img src="img/img.jpg">
+            <h2>John Kim</h2>
+            <p>웹 프론트엔드 개발자</p>
+            <p class="txt02">
+                안녕하세요 John Kim 입니다.<br/>
+                현재 웹프론트앤드 개발자로 활동중이며<br/>
+                김치를 넘나 잘 담그는것
+            </p>
+        </div>
+        <div class="box-2">
+            <p>position</p>
+            <button>startBtn</button>
+        </div>
+    </body>
+    <style>
+        .box-1{
+            width:400px;
+            margin:0 auto;
+            text-align:center;
+            font-size:16px
+        }
+        .box-1 h2{
+            font-weight:bold;
+            font-size:20px
+        }
+        .box-1 .txt02{
+            background:#58d3ef;
+            padding:20px 30px;
+        }
+        .box-2{ 
+            position:relative;
+            width:200px;
+            height:100px;
+            margin:0 auto;
+            padding:10px;
+            background:#c8c8c8;
+            text-align:center;
+        }
+        .box-2 button{
+            position:absolute;
+            width:70px;
+            bottom:10%;
+            left:0;
+            right:0;
+            margin:0 auto;
+/*
+            left: 50%; 
+            transform: translateX(-50%);
+*/
+        }
+    </style>
+</html>
