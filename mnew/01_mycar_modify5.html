@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물수정 - 내차관리</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="tit-sub">차량 상세 설명 수정</h2>
+		<p class="info-box bg-primary">현재 설명글을 수정하거나 PC에서 저장한 나의설명글로 변경하여 수정이 가능합니다</p>
+
+		<h3 class="tit-sub">현재차량 수정</h3>
+		<div class="m-10">
+			<textarea class="inp-txt" readonly="readonly">입력된 상세설명 표시</textarea>
+		</div>
+
+		<h3 class="tit-sub">수정방법 선택</h3>
+		<div class="tab-mycar-modify">
+			<a href="#tabModify1" class="tab-btn on" data-group="tabModify">나의설명글</a>
+			<a href="#tabModify2" class="tab-btn" data-group="tabModify">간편입력</a>
+			<a href="#tabModify3" class="tab-btn" data-group="tabModify">직접입력</a>
+		</div>
+
+		<div id="tabModify1" class="tab-cont m-10" data-group="tabModify" style="display:block">
+			<h4 class="hidden">나의 설명글</h4>
+			<select class="select">
+				<option value="">나의 설명글 선택</option>
+			</select>
+			<textarea class="inp-txt m-t-10">선택한 상세설명 표시</textarea>
+		</div>
+
+		<div id="tabModify2" class="tab-cont m-10" data-group="tabModify">
+			<h4 class="hidden">간편입력</h4>
+			<p class="info-txt-notice m-0">아래 자주 사용하는 문구에서 원하는 문구를 선택하세요</p>
+			<ul class="mycar-check">
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod1" checked="checked">
+					<label for="checkMod1">무사고 차량입니다</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod2">
+					<label for="checkMod2">1인 소유로 관리 잘 된 차량입니다</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod3" checked="checked">
+					<label for="checkMod3">내외관 모두 깨끗합니다</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod4">
+					<label for="checkMod4">엔진오일, 미션오일 등 소모품 교환했습니다</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod5">
+					<label for="checkMod5">주행거리 짧은 쌩쌩한 차량입니다</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMod6">
+					<label for="checkMod6">성능점검내역 1개월 2,000km 보증합니다</label>
+				</li>
+			</ul>
+		</div>
+
+		<div id="tabModify3" class="tab-cont m-10" data-group="tabModify">
+			<h4 class="hidden">직접입력</h4>
+			<textarea class="inp-txt"></textarea>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="history.back()">취소</button>
+			<button class="btn btn-primary btn-right">수정</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

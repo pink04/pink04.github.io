@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">수출상세</h1>
+		<div class="util">
+			<button><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<div class="info-refult">
+			<em class="txt">수출딜러 상세</em>
+			<button class="btn btn-xsm btn-line-primary">재검색</button>
+		</div>
+		<h2 class="tit-sub">선택 수출딜러 정보</h2>	
+		<div class="list-form">
+			<table>
+				<tbody>
+					<tr>
+						<th scope="row">업체명</th>
+						<td>유니크무역</td>
+					</tr>
+					<tr>
+						<th scope="row">대표자명</th>
+						<td>홍길동</td>
+					</tr>
+					<tr>
+						<th scope="row">휴대폰번호</th>
+						<td>010-1234-1234</td>
+					</tr>
+					<tr>
+						<th scope="row">광고중 매입차량</th>
+						<td class="txt_red">10대</td>
+					</tr>
+					<tr>
+						<th scope="row">업체명</th>
+						<td>유니크무역</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2 class="tit-sub">광고중 매입차량 리스트</h2>
+		<div class="list-form">
+			<table>
+				<tbody>
+					<tr>
+						<th scope="row">차량정보</th>
+						<td>[현대]올뉴투싼 디젤 2.2 2WD</td>
+					</tr>
+					<tr>
+						<th scope="row">매입연식</th>
+						<td>2015~2016</td>
+					</tr>
+					<tr>
+						<th scope="row">매입가격</th>
+						<td class="txt-danger">
+							1,900~1,950
+							<button class="btn btn-xsm btn-accent fr popOpen"  data-popup='{"type":"modalPopup","name":"modelyearPrice","callback":""}'>상세보기</button>
+						</td>
+					</tr>
+					<tr class="detail_info">
+						<th scope="row">세부사항</th>
+						<td>
+							미션:<strong>오토</strong>
+							연료:<strong>경유</strong>
+							색상:<strong>검정</strong>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">광고등록일</th>
+						<td>2017-05-24</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="m-t-10">
+				<tbody>
+					<tr>
+						<th scope="row">차량정보</th>
+						<td>[현대]올뉴투싼 디젤 2.2 2WD</td>
+					</tr>
+					<tr>
+						<th scope="row">매입연식</th>
+						<td>2015~2016</td>
+					</tr>
+					<tr>
+						<th scope="row">매입가격</th>
+						<td class="txt-danger">
+							1,900~1,950
+							<button class="btn btn-xsm btn-accent fr popOpen"  data-popup='{"type":"modalPopup","name":"modelyearPrice","callback":""}'>상세보기</button>
+						</td>
+					</tr>
+					<tr class="detail_info">
+						<th scope="row">세부사항</th>
+						<td>
+							미션:<strong>오토</strong>
+							연료:<strong>경유</strong>
+							색상:<strong>검정</strong>
+						</td>
+					</tr>
+					<tr>
+						<th scope="row">광고등록일</th>
+						<td>2017-05-24</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //contents -->
+	
+	<div id="modelyearPrice" class="modal modal-popup">
+		<h1 class="modal-tit">연식별 매입가격</h1>
+		<div class="list-table txt-center">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">연식</th>
+						<th scope="col">가격</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1996년</td>
+						<td class="txt-danger">150만원</td>
+					</tr>
+					<tr>
+						<td>1996년</td>
+						<td class="txt-danger">150만원</td>
+					</tr>
+					<tr>
+						<td>1996년</td>
+						<td class="txt-danger">150만원</td>
+					</tr>
+					<tr>
+						<td>1996년</td>
+						<td class="txt-danger">150만원</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<button class="btn-top">TOP</button>
+</div>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/basic.js"></script>
+</body>
+</html>

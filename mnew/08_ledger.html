@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">원부조회</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<div class="tab-menu">
+			<a href="08_ledger.html" class="on">원부조회</a>
+			<a href="08_ledger2.html">이전조회내역</a>
+		</div>
+
+		<div class="info-box txt-center point-box">
+			<h3>원부조회 잔여포인트</h3>
+			<strong class="num">30</strong>
+			<span class="txt">P</span>
+		</div>
+
+		<ul class="info-txt bullet">
+			<li>조회하려는 차량의 번호를 직접 입력하여 사고이력을 조회하실 수 있습니다.</li>
+			<li>사고이력 조회 시 1건당 1포인트가 차감됩니다.</li>
+			<li>사고이력조회 포인트 충전은 "포인트 충전" 버튼을 클릭하세요.</li>
+			<li>조회한 사고이력은 이전조회내역에서 최초 조회일 이후 30일 동안 확인하실 수 있습니다.</li>
+		</ul>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left">포인트충전</button>
+			<a href="08_ledger_inquiry.html" class="btn btn-primary btn-right">차량등록원부조회</a>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

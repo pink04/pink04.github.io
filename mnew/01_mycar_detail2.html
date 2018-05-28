@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">차량사진수정</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<ul class="info-box info-txt bullet bg-primary">
+			<li>직접 촬영하거나 스마트폰에 저장된 사진을선택하여 등록하실수 있습니다.</li>
+			<li>사진은 최대 20장까지 등록가능합니다.</li>
+			<li>1회 등록시 최대 10장까지 등록가능합니다.</li>
+			<li>사진을 드래그하여 순서 변경이 가능합니다.</li>
+		</ul>
+
+		<!-- 차량정보 -->
+		<div class="list-form">
+			<table>
+				<tr>
+					<th scope="row">제조사</th>
+					<td>기아</td>
+				</tr>
+				<tr>
+					<th scope="row">모델</th>
+					<td>레이</td>
+				</tr>
+				<tr>
+					<th scope="row">상세모델</th>
+					<td>올뉴레이</td>
+				</tr>
+			</table>
+		</div>
+		<!-- //차량정보 -->
+
+		<!-- 사진목록 -->
+		<div class="mycar-img">
+			<span class="count">(0&#47;20)</span>
+			<button class="btn btn-sm btn-line-accent btn-order popOpen" data-popup='{"type":"modalFull","name":"modalOrder","callback":""}'>순서변경</button>
+			<div class="img-none">
+				<img src="img/no_img.png" alt="">
+				<p class="txt">사진을 등록하세요</p>
+			</div>
+			<!-- [D]
+				* 모바일 특성상 드래그 하여 순서 변경 시
+				스크롤이 작동되지 않는 이슈가 있습니다 *
+			 -->
+			<ol>
+				<li>
+					<em class="num">1</em>
+					<img src="img/@img_car.jpg" alt="">
+					<button class="btn-trash"><i class="ico ico-trash">삭제</i></button>
+				</li>
+				<li>
+					<em class="num">2</em>
+					<img src="img/@img_car.jpg" alt="">
+					<button class="btn-trash"><i class="ico ico-trash">삭제</i></button>
+				</li>
+				<li>
+					<em class="num">3</em>
+					<img src="img/@img_car.jpg" alt="">
+					<button class="btn-trash"><i class="ico ico-trash">삭제</i></button>
+				</li>
+				<li>
+					<em class="num">4</em>
+					<img src="img/@img_car.jpg" alt="">
+					<button class="btn-trash"><i class="ico ico-trash">삭제</i></button>
+				</li>
+			</ol>
+			<div class="btn-set">
+				<button class="btn btn-sm btn-default">취소</button>
+				<button class="btn btn-sm btn-default">전체삭제</button>
+				<button class="btn btn-sm btn-primary">사진추가</button>
+				<a href="01_mycar_detail.html" class="btn btn-sm btn-primary">등록완료</a>
+			</div>
+		</div>
+		<!-- //사진목록 -->
+	</div>
+	<!-- //contents -->
+
+	<!-- modal 순서변경 -->
+	<div id="modalOrder" class="modal modal-full">
+		<h3 class="modal-tit">순서변경</h3>
+		<button class="modal-close" onclick="popClose('modalOrder');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<ul class="mycar-order">
+				<li>
+					<div class="img"><img src="img/@img_car.jpg" alt=""></div>
+					<span class="name">파일명1.jpg</span>
+					<div class="move">
+						<button class="btn-ico"><i class="ico ico-up">위로 이동</i></button>
+						<button class="btn-ico"><i class="ico ico-down">아래로 이동</i></button>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="img/@img_car.jpg" alt=""></div>
+					<span class="name">파일명2파일명2파일명2파일명2파일명2파일명2파일명2파일명2파일명2파일명2파일명2파일명2.jpg</span>
+					<div class="move">
+						<button class="btn-ico"><i class="ico ico-up">위로 이동</i></button>
+						<button class="btn-ico"><i class="ico ico-down">아래로 이동</i></button>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="img/@img_car.jpg" alt=""></div>
+					<span class="name">파일명3.jpg</span>
+					<div class="move">
+						<button class="btn-ico"><i class="ico ico-up">위로 이동</i></button>
+						<button class="btn-ico"><i class="ico ico-down">아래로 이동</i></button>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="img/@img_car.jpg" alt=""></div>
+					<span class="name">파일명4.jpg</span>
+					<div class="move">
+						<button class="btn-ico"><i class="ico ico-up">위로 이동</i></button>
+						<button class="btn-ico"><i class="ico ico-down">아래로 이동</i></button>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="img/@img_car.jpg" alt=""></div>
+					<span class="name">파일명5.jpg</span>
+					<div class="move">
+						<button class="btn-ico"><i class="ico ico-up">위로 이동</i></button>
+						<button class="btn-ico"><i class="ico ico-down">아래로 이동</i></button>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalOrder')">취소</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalOrder')">확인</button>
+		</div>
+	</div>
+	<!-- //modal 순서변경 -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

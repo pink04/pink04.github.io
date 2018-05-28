@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물수정 - 내차관리</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="tit-sub">옵션내용 수정</h2>
+
+		<ul class="list-slide m-t-10">
+			<li><button class="slb slb-icon">기본옵션</button>
+				<ul class="mycar-option">
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt11" checked="checked">
+						<label for="checkOpt11">전체선택</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt12">
+						<label for="checkOpt12">에어컨</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt13" checked="checked">
+						<label for="checkOpt13">메탈그레인</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt14" checked="checked">
+						<label for="checkOpt14">썬루프</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt15">
+						<label for="checkOpt15">파워윈도우</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt16">
+						<label for="checkOpt16">알루미늄힐</label>
+					</li>
+				</ul>
+			</li>
+			<li><button class="slb slb-icon">안전관리옵션</button>
+				<ul class="mycar-option">
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt21">
+						<label for="checkOpt21">전체선택</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt22">
+						<label for="checkOpt22">에어컨</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt23">
+						<label for="checkOpt23">메탈그레인</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt24">
+						<label for="checkOpt24">썬루프</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt25">
+						<label for="checkOpt25">파워윈도우</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt26">
+						<label for="checkOpt26">알루미늄힐</label>
+					</li>
+				</ul>
+			</li>
+			<li><button class="slb slb-icon">영상&#47;음향옵션</button>
+				<ul class="mycar-option">
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt31">
+						<label for="checkOpt31">전체선택</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt32">
+						<label for="checkOpt32">에어컨</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt33">
+						<label for="checkOpt33">메탈그레인</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt34">
+						<label for="checkOpt34">썬루프</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt35">
+						<label for="checkOpt35">파워윈도우</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt36">
+						<label for="checkOpt36">알루미늄힐</label>
+					</li>
+				</ul>
+			</li>
+			<li><button class="slb slb-icon">기타옵션</button>
+				<ul class="mycar-option">
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt41">
+						<label for="checkOpt41">전체선택</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt42">
+						<label for="checkOpt42">에어컨</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt43">
+						<label for="checkOpt43">메탈그레인</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt44">
+						<label for="checkOpt44">썬루프</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt45">
+						<label for="checkOpt45">파워윈도우</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt46">
+						<label for="checkOpt46">알루미늄힐</label>
+					</li>
+				</ul>
+			</li>
+			<li><button class="slb slb-icon">추가장착옵션</button>
+				<ul class="mycar-option">
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt51">
+						<label for="checkOpt51">전체선택</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt52">
+						<label for="checkOpt52">에어컨</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt53">
+						<label for="checkOpt53">메탈그레인</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt54">
+						<label for="checkOpt54">썬루프</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt55">
+						<label for="checkOpt55">파워윈도우</label>
+					</li>
+					<li>
+						<input type="checkbox" class="checkbox" id="checkOpt56">
+						<label for="checkOpt56">알루미늄힐</label>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="history.back()">취소</button>
+			<button class="btn btn-primary btn-right">수정</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물수정 - 내차관리</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="tit-sub">차량 기본정보 수정</h2>
+		<p class="info-txt txt-right"><em class="bullet-esst">*</em>는 필수입력 사항입니다</p>
+
+		<div class="list-form">
+			<table>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>차량번호</th>
+					<td>11가 1234</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>최초등록</th>
+					<td><input type="text" class="inp-txt"></td>
+				</tr>
+				<tr>
+					<th scope="row">차대번호</th>
+					<td><input type="text" class="inp-txt"></td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>모델</th>
+					<td>
+						<select class="select item-left">
+							<option>레이</option>
+						</select>
+						<select class="select item-right">
+							<option>는 귀여워</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>세부모델</th>
+					<td>
+						<select class="select">
+							<option>올뉴레이</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>등급</th>
+					<td>
+						<select class="select">
+							<option>디럭스</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">세부등급</th>
+					<td>
+						<select class="select">
+							<option>세부등급</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>년월&#47;연료</th>
+					<td>
+						<select class="select item-left">
+							<option>2015</option>
+						</select>
+						<select class="select item-right">
+							<option>휘발유</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>변속기&#47;색상</th>
+					<td>
+						<select class="select item-left">
+							<option>오토</option>
+						</select>
+						<select class="select item-right">
+							<option>검정</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>모델</th>
+					<td>
+						<select class="select item-left">
+							<option>기아</option>
+						</select>
+						<select class="select item-right">
+							<option>레이</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>주행거리</th>
+					<td>
+						<div class="item item-unit">
+							<input type="number" class="inp-txt">
+							<span class="unit">KM</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">성능점검번호</th>
+					<td>
+						<input type="number" class="inp-txt">
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>LPG차량 일반인 등록가능 여부</th>
+					<td>
+						<select class="select">
+							<option>가능</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>압류건수</th>
+					<td>
+						<select class="select">
+							<option>있음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>저당건수</th>
+					<td>
+						<select class="select">
+							<option>있음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">미납세금정보</th>
+					<td>
+						<textarea class="inp-txt"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">화물차톤수</th>
+					<td>
+						<select class="select">
+							<option>선택</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">침수여부</th>
+					<td>
+						<select class="select">
+							<option>없음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">큰사고여부</th>
+					<td>
+						<select class="select">
+							<option>없음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">500만원이상 수리</th>
+					<td>
+						<select class="select">
+							<option>없음</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><em class="bullet-esst">*</em>온라인매매 알선의뢰 <button class="txt-primary font-sm popOpen"  data-popup='{"type":"modalPopup","name":"modalDetail","callback":""}'>[자세히]</button></th>
+					<td>
+						<select class="select">
+							<option>올뉴레이</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="history.back()">취소</button>
+			<button class="btn btn-primary btn-right">수정</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<!-- modal 자세히 -->
+	<div id="modalDetail" class="modal modal-popup">
+		<h3 class="modal-tit">알선의뢰안내</h3>
+		<p class="info-box">카매니저와 연계되어 제공되고 있는 전국자동차매매조합, 연합회, 지부 등 판매 활성화를 위한 기타 홈페이지에 알선광고를 노출하는 행위에 대한 동의입니다</p>
+		<button class="modal-close" onclick="popClose('modalDetail');"><i class="ico ico-lg ico-close">닫기</i></button>
+	</div>
+	<!-- //modal 자세히 -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

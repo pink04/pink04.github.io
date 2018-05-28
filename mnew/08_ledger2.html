@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">이전조회내역</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<div class="tab-menu">
+			<a href="08_ledger.html">원부조회</a>
+			<a href="08_ledger2.html" class="on">이전조회내역</a>
+		</div>
+
+		<ul class="info-txt notice">
+			<li>이전조회 내역은 최근 30일동안의 조회 내역을 확인 할 수 있습니다.</li>
+			<li>이전조회내역의 사고이력은 조회한 날짜의 사고이력입니다(오늘 날짜의 DATA와 차이가 있을 수 있습니다.)</li>
+		</ul>
+
+		<form class="form-box bordered">
+			<div class="item item-date">
+				<label for="formBox">조회일</label>
+				<input type="text" id="formBox" class="inp-txt inp-date inp-left" readonly="readonly" placeholder="부터" value="2017-11-15">
+				<span class="sb">~</span>
+				<input type="text" class="inp-txt inp-date inp-right" readonly="readonly" placeholder="까지">
+			</div>
+			<div class="item">
+				<label for="formBox2">차량번호</label>
+				<input type="num" id="formBox2" class="inp-txt">
+			</div>
+		</form>
+		<div class="btn-group">
+			<button class="btn btn-default btn-left">초기화</button>
+			<button class="btn btn-primary btn-right">검색</button>
+		</div>
+
+		<p class="tit-sub">총 : <strong class="txt-danger">480</strong>대</p>
+		<div class="list-table">
+			<table class="txt-center">
+				<thead>
+					<tr>
+						<th scope="col">NO</th>
+						<th scope="col">차량번호</th>
+						<th scope="col">조회일시</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="3">내용이 없습니다.</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00가 1234</td>
+						<td>2016-10-10 20:00</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00가 1234</td>
+						<td>2016-10-10 20:00</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00가 1234</td>
+						<td>2016-10-10 20:00</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>00가 1234</td>
+						<td>2016-10-10 20:00</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="paging">
+			<a href="javascript:;" class="first"><i class="ico ico-first">첫번째 페이지로 이동</i></a>
+			<a href="javascript:;" class="prev"><i class="ico ico-prev">이전 페이지로 이동</i></a>
+			<a href="javascript:;" class="on">1</a>
+			<a href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			<a href="javascript:;" class="next"><i class="ico ico-next">다음 페이지로 이동</i></a>
+			<a href="javascript:;" class="last"><i class="ico ico-last">마지막 페이지로 이동</i></a>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<style>
+		.block{padding:20px;border-top:1px solid #d0d0d0}
+		h1{margin-bottom:15px;font-size:18px}
+		.tab-cont{padding:20px;background:#fafafa;font-size:14px}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">GUIDE</h1>
+		<div class="util">
+			<button class="slide-btn" data-slide="slideGNB"><i class="ico ico-lg ico-menu">메뉴열기</i></button>
+			<button><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+			<a href="index.html" class="fr"><i class="ico ico-lg ico-home">HOME</i></a>
+			<button class="fr"><i class="ico ico-lg ico-search">검색</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- Global Menu -->
+	<div id="slideGNB" class="slide-cont gnb-menu">
+		<!-- [D] gnb menu 활성화 시 클래스 active 추가 -->
+		<div class="util">
+			<p class="greeting">홍길동님 환영합니다</p>
+			<div class="btn-util">
+				<a href="13_my.html" class="btn btn-my">My Page</a>
+				<a href="javascript:;" class="btn btn-logout">로그아웃</a>
+			</div>
+		</div>
+
+		<ul class="info">
+			<li>전국연종사원 <a href="13_my.html">30일</a></li>
+			<li>APP이용기간 <a href="13_my.html">20일</a></li>
+			<li>원부조회 <a href="08_ledger.html">11P</a></li>
+			<li>사고이력조회 <a href="07_accident.html">30일</a></li>
+			<li>핫마크 <a href="01_mycar3.html">2개</a></li>
+			<li>문자 <a href="13_my.html">2개</a></li>
+		</ul>
+
+		<form action="" class="search">
+			<legend>매물조회</legend>
+			<div class="item">
+				<label for="searchCar">차량명</label>
+				<input type="text" id="searchCar" class="inp-txt inp-sm">
+			</div>
+			<div class="item">
+				<label for="searchCarNum">차량번호</label>
+				<input type="text" id="searchCarNum" class="inp-txt inp-sm">
+			</div>
+			<button class="btn">검색</button>
+		</form>
+
+		<nav class="nav">
+			<h2 class="hidden">Navigation Menu</h2>
+			<ul>
+				<li><a href="01_mycar.html">내차관리</a></li>
+				<li><a href="09_product.html">상품구매&#47;관리</a></li>
+				<li><a href="03_current.html">매물현황조회</a></li>
+				<li><a href="04_sale.html">팔린매물조회</a></li>
+				<li><a href="05_price.html">시세조회</a></li>
+				<li><a href="06_employee.html">사원확인</a></li>
+				<li><a href="10_export.html">수출조회</a></li>
+				<li><a href="11_community.html">커뮤니티</a></li>
+			</ul>
+			<ul>
+				<li><a href="00_today.html">오늘본차량</a></li>
+				<li><a href="javascript:;">고객센터</a></li>
+				<li><a href="14_setting.html">환경설정</a></li>
+			</ul>
+		</nav>
+
+		<button class="slide-btn btn-close"  data-slide="slideGNB"><i class="ico ico-lg ico-close">닫기</i></button>
+	</div>
+	<!-- Global Menu -->
+
+	<!-- contents -->
+	<div class="contents">
+		<!-- FONT -->
+		<section class="block" style="border-top:0">
+			<h1>FONT</h1>
+			<h2 class="tit-sub">서브타이틀</h2>
+			<p>기본텍스트</p>
+			<p class="txt-center">가운데정렬</p>
+			<p class="txt-right">오른쪽정렬</p>
+			<p class="fl">float 좌</p>
+			<p class="fr">float 우</p>
+			<br>
+			<p class="txt-primary">txt-primary(#1C62CC)</p>
+			<p class="txt-danger">txt-danger(#e14b42)</p>
+			<p class="txt-grey">txt-grey(#555)</p>
+			<p class="txt-lighter">txt-lighter(#888)</p>
+			<p class="font-sm">작은폰트 13px</p>
+			<p class="font-xsm">더 작은폰트 12px</p>
+		</section>
+		<!-- //FONT -->
+
+		<!-- ICON -->
+		<section class="block" style="background:#d0d0d0">
+			<h1>ICON</h1>
+			<i class="ico ico-notice"></i>
+			<br>
+			<i class="ico ico-lg ico-close"></i>
+			<i class="ico ico-lg ico-menu"></i>
+			<i class="ico ico-lg ico-menu2"></i>
+			<i class="ico ico-lg ico-search"></i>
+			<i class="ico ico-lg ico-search2"></i>
+			<i class="ico ico-lg ico-back"></i>
+			<i class="ico ico-lg ico-home"></i>
+		</section>
+		<!-- //ICON -->
+
+		<!-- BUTTON -->
+		<section class="block">
+			<h1>BUTTON</h1>
+			<button class="btn btn-default">btn btn-default</button>
+			<button class="btn btn-primary">btn btn-primary</button>
+			<button class="btn btn-accent">btn btn-primary</button>
+			<button class="btn btn-line">btn btn-line</button>
+			<button class="btn btn-line-primary">btn btn-line-primary</button>
+			<button class="btn btn-line-accent">btn btn-line-accent</button>
+			<br><br>
+			<button class="btn btn-sm btn-default">btn-sm</button>
+			<button class="btn btn-sm btn-line">btn-sm</button>
+			<button class="btn btn-sm btn-primary">btn-sm</button>
+			<button class="btn btn-sm btn-accent">btn-sm</button>
+			<button class="btn btn-sm btn-line-primary">btn-sm</button>
+			<button class="btn btn-sm btn-line-accent">btn-sm</button>
+			<br><br>
+			<button class="btn btn-xsm btn-default">btn-xsm</button>
+			<button class="btn btn-xsm btn-line">btn-xsm</button>
+			<button class="btn btn-xsm btn-primary">btn-xsm</button>
+			<button class="btn btn-xsm btn-accent">btn-xsm</button>
+			<button class="btn btn-xsm btn-line-primary">btn-xsm</button>
+			<button class="btn btn-xsm btn-line-accent">btn-xsm</button>
+
+			<div class="btn-group">
+				<button class="btn btn-accent btn-center">btn-center</button>
+				<button class="btn btn-default btn-left">btn-left</button>
+				<button class="btn btn-primary btn-right">btn-right</button>
+			</div>
+		</section>
+		<!-- //BUTTON -->
+
+		<!-- INFO -->
+		<section class="block">
+			<h1>INFO</h1>
+			<p class="info-txt">입력하신 차량번호와 일치하는 차량이 없습니다.</p>
+			<p class="info-txt-notice">입력하신 차량번호와 일치하는 차량이 없습니다.</p>
+			<ul class="info-txt bullet">
+				<li>입력하신 차량번호와 일치하는 차량이 없습니다.</li>
+				<li>입력하신 차량번호와 일치하는 차량이 없습니다.</li>
+			</ul>
+			<ul class="info-txt notice">
+				<li>입력하신 차량번호와 일치하는 차량이 없습니다.</li>
+				<li>입력하신 차량번호와 일치하는 차량이 없습니다.</li>
+			</ul>
+			<div class="info-box">info-box</div>
+			<div class="info-box txt-center">info-box</div>
+			<strong class="info-box txt-primary">info-box</strong>
+			<strong class="info-box txt-danger">info-box</strong>
+			<div class="info-box bg-primary">info-box</div>
+			<div class="info-box bg-danger">info-box</div>
+			<br>
+			<p class="info-refult">광고중인차량 <em class="txt-primary m-r-10">10대</em> 미수정차량 <em class="txt-danger">2대</em></p>
+			<br>
+			<div class="info-refult">
+				<!-- [D] 우측 재검색 버튼이 있을 경우 -->
+				<em class="txt">[기아] 레이</em>
+				<button class="btn btn-xsm btn-line-primary">재검색</button>
+			</div>
+			<br>
+			<p class="info-result-none"><i class="ico ico-notice"></i>검색된 차량이 없습니다</p>
+		</section>
+		<!-- //INFO -->
+
+		<!-- FORM -->
+		<section class="block">
+			<h1>FORM</h1>
+			<input type="text" class="inp-txt" placeholder="text">
+			<input type="password" class="inp-txt" placeholder="password">
+			<input type="tel" class="inp-txt" placeholder="tel">
+			<input type="email" class="inp-txt" placeholder="email">
+			<input type="number" class="inp-txt" placeholder="number">
+			<input type="text" class="inp-txt inp-sm" placeholder="text" value="small">
+			<textarea class="inp-txt">입력상자</textarea>
+			<textarea class="inp-txt inp-sm">입력상자</textarea>
+			<br><br>
+			<select class="select">
+				<option>선택</option>
+			</select>
+			<select class="select select-sm">
+				<option>선택</option>
+			</select>
+			<br><br>
+			<input type="checkbox" id="check1" class="checkbox" checked="checked">
+			<label for="check1">체크1</label>
+			<input type="checkbox" id="check2" class="checkbox">
+			<label for="check2">체크2</label>
+			<br><br>
+			<input type="checkbox" id="checkOnly1" class="checkbox check-only" checked="checked">
+			<label for="checkOnly1">체크1</label>
+			<input type="checkbox" id="checkOnly2" class="checkbox check-only">
+			<label for="checkOnly2">체크2</label>
+			<br><br>
+			<input type="checkbox" id="checkOnff1" class="checkbox check-onff" checked="checked">
+			<label for="checkOnff1">체크1</label>
+			<input type="checkbox" id="checkOnff2" class="checkbox check-onff">
+			<label for="checkOnff2">체크2</label>
+			<br><br>
+			<input type="radio" id="radio1" class="radio" name="radio" checked="checked">
+			<label for="radio1">라디오</label>
+			<input type="radio" id="radio2" class="radio" name="radio">
+			<label for="radio2">라디오</label>
+			<br><br>
+			<form class="form-box">
+				<input type="text" class="inp-txt inp-left">
+				<select class="select inp-right">
+					<option>선택</option>
+				</select>
+				<select class="select">
+					<option>선택</option>
+				</select>
+			</form>
+			<form class="form-box bordered">
+				<div class="item item-date">
+					<label for="formBox">조회일</label>
+					<input type="text" id="formBox" class="inp-txt inp-left popOpen" data-popup='{"type":"modalFull","name":"modalCont3","callback":""}' readonly="readonly" placeholder="부터" value="2017-11-15">
+					<span class="sb">~</span>
+					<input type="text" class="inp-txt inp-right popOpen" data-popup='{"type":"modalFull","name":"modalCont3","callback":""}' readonly="readonly" placeholder="까지">
+				</div>
+				<div class="item">
+					<label for="formBox2">차량번호</label>
+					<input type="text" id="formBox2" class="inp-txt">
+				</div>
+			</form>
+			<form class="form-search">
+				<input type="text" class="inp-txt">
+				<button class="btn btn-primary">검색</button>
+			</form>
+		</section>
+		<!-- //FORM -->
+
+		<!-- LABEL -->
+		<section class="block">
+			<h1>LABEL</h1>
+			<span class="label label-primary">광고중</span>
+			<span class="label label-danger">준비중</span>
+			<br>
+			<span class="hotmark">hotmark</span>
+			<span class="hotmark">준신차</span>
+			<span class="hotmark">무사고</span>
+			<span class="hotmark">hot</span>
+		</section>
+		<!-- //LABEL -->
+
+		<!-- LIST -->
+		<section class="block">
+			<h1>LIST</h1>
+			<h2 class="tit-sub">요약정보 리스트</h2>
+			<ul class="list-summury">
+				<li><em>요약정보제목</em> 요약정보내용</li>
+					<li><em>요약정보제목</em> 요약정보내용</li>
+			</ul>
+			<ul class="list-summury txt-right">
+				<li><em>요약정보제목</em> 요약정보내용</li>
+					<li><em>요약정보제목</em> 요약정보내용</li>
+			</ul>
+			<ul class="list-summury bordered">
+				<li><em>요약정보제목</em> 요약정보내용</li>
+					<li><em>요약정보제목</em> 요약정보내용</li>
+			</ul>
+
+			<h2 class="tit-sub">List Table</h2>
+			<div class="list-table">
+				<table>
+					<thead>
+						<tr>
+							<th scope="col">항목</th>
+							<th scope="col">항목</th>
+							<th scope="col">항목</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>항목</td>
+							<td>항목</td>
+							<td>항목</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h2 class="tit-sub">List Form</h2>
+			<div class="list-form">
+				<table>
+					<tr>
+						<th scope="row">상품명</th>
+						<td>상품명</td>
+					</tr>
+					<tr>
+						<th scope="row">상품명</th>
+						<td><input type="text" class="inp-txt inp-sm"></td>
+					</tr>
+					<tr>
+						<th scope="row">상품명</th>
+						<td>
+							<select class="select select-sm">
+								<option value="">상품명</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+		</div>
+		</section>
+		<!-- //LIST -->
+
+		<!-- SLIDE -->
+		<section class="block">
+			<h1>SLIDE</h1>
+			<!-- [D] 술라이드 사용 정의
+				* 버튼 클래스 slide-btn
+				* 버튼의 data-slide = 해당 컨텐츠의 ID
+			-->
+			<button class="slide-btn btn btn-sm btn-primary" data-slide="slideGNB">슬라이드 메뉴</button>
+			<br><br>
+			<button class="slide-btn btn btn-sm btn-primary" data-slide="slideCont1">슬라이드 내용1</button>
+			<button class="slide-btn btn btn-sm btn-primary" data-slide="slideCont2">슬라이드 내용2</button>
+			<div id="slideCont1" class="slide slide-cont">Slide Cont1</div>
+			<div id="slideCont2" class="slide slide-cont">Slide Cont2</div>
+			<br>
+
+			<!-- [D] 술라이드 리스트 사용 정의
+				* 버튼 클래스 slb
+				* 버튼 아이콘 표시 클래스 slb-icon
+			-->
+			<ul class="list-slide">
+				<li><button class="slb slb-icon">List Slide</button>
+					<ul>
+						<li><button class="slb">List Sub Slide2</button>
+							<ul>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+							</ul>
+						</li>
+						<li><button class="slb">List Sub Slide2</button>
+							<ul>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><button class="slb slb-icon">List Slide</button>
+					<ul>
+						<li><button class="slb">List Sub Slide2</button>
+							<ul>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+							</ul>
+						</li>
+						<li><button class="slb">List Sub Slide2</button>
+							<ul>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+								<li>List Sub Slide3 Contents</li>
+							</ul>
+						</li>
+						<li>List Sub Slide2</li>
+					</ul>
+				</li>
+			</ul>
+
+			<ul class="list-slide">
+				<li>
+					<div class="slb slb-icon">
+						<!-- [D]
+							* 선택 시 해당 버튼에 클래스 on
+							* slb-btn 텍스트 삭제
+							* selected에 선택 된 텍스트 + 삭제버튼 추가
+						-->
+						<button class="slb-btn"></button>
+						<div class="selected">기아<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+					</div>
+					<ul class="list-company">
+						<li><button class="slb slb-select" onclick="sortCompany('현대')"><img src="img/sub/303_90.png" alt="">현대</button></li>
+						<li><button class="slb slb-select on" onclick="sortCompany('기아')"><img src="img/sub/307_90.png" alt="">기아</button></li>
+						<li><button class="slb slb-select" onclick="sortCompany('대우/쉐보레')"><img src="img/sub/312_90.png" alt="">대우/쉐보레</button></li>
+						<li><button class="slb slb-select" onclick="sortCompany('쌍용')"><img src="img/sub/326_90.png" alt="">쌍용</button></li>
+						<li><button class="slb slb-select" onclick="sortCompany('르노삼성')"><img src="img/sub/321_90.png" alt="">르노삼성</button></li>
+					</ul>
+				</li>
+				<li>
+					<div class="slb slb-icon">
+						<!-- [D]
+							* 선택 시 해당 버튼에 클래스 on
+							* slb-btn 텍스트 삭제
+							* selected에 선택 된 텍스트 + 삭제버튼 추가
+							* 상세모델명 선택 시 detail 항목 추가
+						-->
+						<button class="slb-btn"></button>
+						<div class="selected">레이<button class="delete"><i class="ico ico-delete">삭제</i></button>
+							<div class="detail"><i class="ico ico-detail"></i>레이3<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+						</div>
+					</div>
+					<ul class="list-model">
+						<li><button class="slb slb-icon">모델명1</button>
+							<ul class="list-model-detail">
+								<li><button class="slb">상세모델명</button></li>
+								<li><button class="slb">상세모델명</button></li>
+								<li><button class="slb">상세모델명</button></li>
+							</ul>
+						</li>
+						<li><button class="slb slb-icon">모델명2</button>
+							<ul class="list-model-detail">
+								<li><button class="slb">상세모델명</button></li>
+								<li><button class="slb">상세모델명</button></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="slb slb-icon">
+						<!-- [D]
+							* 선택 시 해당 버튼에 클래스 on
+							* slb-btn 텍스트 삭제
+							* selected에 선택 된 텍스트 + 삭제버튼 추가
+							* 상세모델명 선택 시 detail 항목 추가
+						-->
+						<button class="slb-btn popOpen" data-popup='{"type":"modalFull","name":"modalCont3","callback":""}'></button>
+						<div class="selected">세부등급<button class="delete"><i class="ico ico-delete">삭제</i></button>
+							<div class="detail"><i class="ico ico-detail"></i>2.0<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+							<div class="detail"><i class="ico ico-detail"></i>3.0<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+		<!-- //SLIDE -->
+
+		<!-- TAB -->
+		<section class="block">
+			<h1>TAB</h1>
+			<!-- [D] 탭 사용 정의
+				* 버튼 클래스 tab-btn
+				* 컨텐츠 클래스 tab-cont
+				* 버튼의 # + href = 해당 컨텐츠의 ID
+				* 버튼과 컨텐츠의 공통 속성 data-group 정의(각 탭의 고유한 그룹명)
+			-->
+			<div class="tab-menu">
+				<a href="#tabMenu1" class="tab-btn on" data-group="tabMenu">tab-btn1</a>
+				<a href="#tabMenu2" class="tab-btn" data-group="tabMenu">tab-btn2</a>
+			</div>
+			<div id="tabMenu1" class="tab-cont" data-group="tabMenu" style="display:block">
+				tab menu contents1
+			</div>
+			<div id="tabMenu2" class="tab-cont" data-group="tabMenu">
+				tab menu contents2
+			</div>
+			<br><br>
+			<div class="tab-sub tab-3ea">
+				<a href="#tabSub1" class="tab-btn on" data-group="tabSub">tab-btn1</a>
+				<a href="#tabSub2" class="tab-btn" data-group="tabSub">tab-btn2</a>
+				<a href="#tabSub3" class="tab-btn" data-group="tabSub">tab-btn3</a>
+			</div>
+			<div id="tabSub1" class="tab-cont" data-group="tabSub" style="display:block">
+				tab sub contents1
+			</div>
+			<div id="tabSub2" class="tab-cont" data-group="tabSub">
+				tab sub contents2
+			</div>
+			<div id="tabSub3" class="tab-cont" data-group="tabSub">
+				tab sub contents3
+			</div>
+			<br><br>
+			<div class="tab-form">
+				<a href="#tabForm1" class="tab-btn on" data-group="tabForm">tab-btn1</a>
+				<a href="#tabForm2" class="tab-btn" data-group="tabForm">tab-btn2</a>
+			</div>
+			<div id="tabForm1" class="tab-cont" data-group="tabForm" style="display:block">
+				tab form1
+			</div>
+			<div id="tabForm2" class="tab-cont" data-group="tabForm">
+				tab form2
+			</div>
+		</section>
+		<!-- //TAB -->
+
+		<!-- POPUP -->
+		<div class="block">
+			<h1 class="tit-sub">POPUP</h1>
+			<!-- [D] 팝업 사용 정의
+				* 버튼 클래스 popOpen
+				* 컨텐츠 클래스 modal modal-'type' = 해당 버튼의 data-popup 'type' (modalPopup, modalSlide, modalFull)
+				* 버튼의 data-popup 'name' = 해당 팝업의 ID
+			-->
+			<button class="btn btn-sm btn-accent popOpen" data-popup='{"type":"modalPopup","name":"modalCont1","callback":""}'>Modal Popup</button>
+			<button class="btn btn-sm btn-accent popOpen" data-popup='{"type":"modalSlide","name":"modalCont2","callback":""}'>Modal Slide</button>
+			<button class="btn btn-sm btn-accent popOpen" data-popup='{"type":"modalFull","name":"modalCont3","callback":""}'>Modal Full Slide</button>
+		</div>
+		<!-- //POPUP -->
+	</div>
+	<!-- contents -->
+
+	<div id="modalCont1" class="modal modal-popup">
+		<h1 class="modal-tit">모달팝업 제목</h1>
+		모달팝업 내용<br>내용<br>내용<br>내용<br>내용<br>내용
+	</div>
+
+	<div id="modalCont2" class="modal modal-slide">
+		내용<br>내용<br>내용<br>내용<br>내용<br>내용
+	</div>
+
+	<div id="modalCont3" class="modal modal-full">
+		<h1 class="modal-tit">슬라이드팝업 제목</h1>
+		<div class="modal-cont">
+			내용 blah blah<br>내용<br>내용<br>내용<br>내용<br>내용<br>내용
+		</div>
+		<button class="modal-close" onclick="popClose();"><i class="ico ico-lg ico-close">닫기</i></button>
+	</div>
+
+	<div class="util-bottom">
+		<div class="btn-group">
+			<button class="btn btn-default btn-left">btn btn-default</button>
+			<button class="btn btn-primary btn-right">btn btn-accent</button>
+		</div>
+	</div>
+
+	<button class="btn-top">TOP</button>
+</div>
+<script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/basic.js"></script>
+</body>
+</html>

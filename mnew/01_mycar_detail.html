@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물상세</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<!-- 메인 비주얼 -->
+		<div class="swiper-container mydetail-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/@img_car.jpg" alt=""></div>
+				<div class="swiper-slide"><img src="img/@img_car.jpg" alt=""></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<script>
+		var swiper = new Swiper('.mydetail-swiper', {
+			loop: true,
+			autoplay: {delay: 5000},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+		</script>
+		<!-- //메인 비주얼 -->
+
+		<div class="list-mydetail">
+			<h2 class="tit">[현대]그랜저 HG 300 PRIME</h2>
+			<ul class="info">
+				<li>2012.01</li>
+				<li>오토</li>
+				<li>휘발유</li>
+				<li>17,000km</li>
+				<li>최초등록일 : 2012.07</li>
+			</ul>
+			<strong class="price">2,500만원</strong>
+		</div>
+
+		<ul class="list-mydetail2">
+			<li><button class="btn-detail detail1 popOpen" data-popup='{"type":"modalFull","name":"modalDetail1","callback":""}'>성능점검</button></li>
+			<li><a href="07_accident_result.html" class="btn-detail detail2">사고이력</a></li>
+			<li><a href="08_ledger_result.html" class="btn-detail detail3">원부조회</a></li>
+			<li><button class="btn-detail detail4 popOpen" data-popup='{"type":"modalFull","name":"modalDetail2","callback":""}'>이전비용</button></li>
+		</ul>
+
+		<h2 class="tit-sub">상세정보</h2>
+		<ul class="list-summury txt-right">
+			<li><em>LPG일반인등록</em> <strong class="txt-danger">불가능</strong></li>
+			<li><em>압류건수</em> 0건</li>
+			<li><em>저당건수</em> 0건</li>
+			<li><em>세금미납정보</em> 세금 미납내역이 없습니다</li>
+			<li><em>사고내역</em> 매물수정에서 입력한 사고내역</li>
+			<li><em>차량설명</em>
+				<div class="box txt-left">
+					무사고 차량입니다.
+				</div>
+			</li>
+		</ul>
+
+		<div class="box-line">
+			<h2 class="tit-sub">옵션정보</h2>
+			<ul class="list-myoption">
+				<li class="option1 on">썬루프</li>
+				<li class="option2 on">블랙박스</li>
+				<li class="option3">네비게이션</li>
+				<li class="option4">스마트키</li>
+				<li class="option5">후방카메라</li>
+				<li class="option6">가죽시트</li>
+				<li class="option7">에어백</li>
+				<li class="option8">HD 헤드램프</li>
+			</ul>
+			<div class="btn-group">
+				<button class="btn btn-line btn-center popOpen" data-popup='{"type":"modalFull","name":"modalOption","callback":""}'>상세옵션 <i class="ico ico-plus">더보기</i></button>
+			</div>
+		</div>
+
+		<div class="box-line">
+			<h2 class="tit-sub">판매자정보</h2>
+			<ul class="list-summury txt-right">
+				<li><em>위치</em> 경기/수원/중앙단지</li>
+				<li><em>상사</em> 자마이카 031-123-1234</li>
+				<li><em>담당자</em> 홍길동 <strong class="txt-danger">010-1234-1234</strong></li>
+			</ul>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<!-- modal 성능점검 -->
+	<div id="modalDetail1" class="modal modal-full">
+		<h3 class="modal-tit">성능점검</h3>
+		<button class="modal-close" onclick="popClose('modalDetail1');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont">
+			성능점검 내용
+		</div>
+	</div>
+	<!-- //modal 성능점검 -->
+
+	<!-- modal 이전비용 -->
+	<div id="modalDetail2" class="modal modal-full">
+		<h3 class="modal-tit">이전비용계산</h3>
+		<button class="modal-close" onclick="popClose('modalDetail2');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<ul class="mycar-price">
+				<li class="item item-unit"><em>판매금액</em>
+					<input type="number" class="inp-txt txt-right">
+					<span class="unit">만원</span>
+				</li>
+				<li><em>차량용도구분</em>
+					<div class="switch">
+						<input type="radio" id="inpPrice1" name="inpPrice" checked="checked">
+						<label for="inpPrice1">비영업용</label>
+						<input type="radio" id="inpPrice2" name="inpPrice">
+						<label for="inpPrice2">영업용</label>
+					</div>
+				</li>
+				<li><em>거주지선택</em>
+					<div class="switch">
+						<input type="radio" id="inpArea1" name="inpArea" checked="checked">
+						<label for="inpArea1" class="area">서울 인천 부산 <br>대구 대전</label>
+						<input type="radio" id="inpArea2" name="inpArea">
+						<label for="inpArea2">그외 지역</label>
+					</div>
+				</li>
+				<li><em>번호변경여부</em>
+					<div class="switch">
+						<input type="radio" id="inpChange1" name="inpChange" checked="checked">
+						<label for="inpChange1">교체</label>
+						<input type="radio" id="inpChange2" name="inpChange">
+						<label for="inpChange2">없음</label>
+					</div>
+				</li>
+				<li><em>보조번호판 구매</em>
+					<div class="switch">
+						<input type="radio" id="inpBuy1" name="inpBuy">
+						<label for="inpBuy1">구입</label>
+						<input type="radio" id="inpBuy2" name="inpBuy" checked="checked">
+						<label for="inpBuy2">구입안함</label>
+					</div>
+				</li>
+				<li><em>등록대행료</em>
+					<select class="select">
+						<option value="">154000</option>
+					</select>
+				</li>
+				<li><em class="br">관공서인지&#47;<br>중지구입비</em>
+					<div class="switch">
+						<input type="radio" id="inpDoc1" name="inpDoc">
+						<label for="inpDoc1">구입</label>
+						<input type="radio" id="inpDoc2" name="inpDoc" checked="checked">
+						<label for="inpDoc2">구입안함</label>
+					</div>
+				</li>
+				<li><em class="br">공채매입<br>할인율 구분</em>
+					<select class="select">
+						<option value="">75%</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalDetail2')">취소</button>
+			<button class="btn btn-right btn-primary popOpen" data-popup='{"type":"modalFull","name":"modalDetail3","callback":""}'>계산하기</button>
+		</div>
+	</div>
+	<!-- //modal 이전비용 -->
+
+	<!-- modal 이전비용 계산결과 -->
+	<div id="modalDetail3" class="modal modal-full">
+		<h3 class="modal-tit">이전비용 계산결과</h3>
+		<button class="modal-close" onclick="popClose('modalDetail3');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<strong class="tit-sub">이전비용내역</strong>
+			<ul class="mycar-price2">
+				<li>
+					<em>등록세</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li>
+					<em>취득세</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li>
+					<em>등록대행료</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li>
+					<em>번호판 교체비</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li>
+					<em>인지/중지대</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li>
+					<em>공채매입비</em>
+					<strong class="txt-black">10,000</strong>원
+				</li>
+				<li class="total">
+					<em>총 이전 비용</em>
+					<strong class="txt-danger">120,000,000,000</strong>원
+				</li>
+			</ul>
+
+			<strong class="tit-sub">주의사항</strong>
+			<ul class="info-box info-txt notice">
+				<li>위 금액은 등록대행 수수료를 제외한 금액입니다.</li>
+				<li>정확한 이전등록 비용이 아닐수 있으므로 참고 자료로 활용 바랍니다.</li>
+				<li>실제 이전 등록시에 과세표준시가에 따라 상황 조정 될 수 있습니다.</li>
+			</ul>
+		</div>
+		<div class="btn-group">
+			<button class="btn btn-center btn-default" onclick="popClose('modalDetail3')">닫기</button>
+		</div>
+	</div>
+	<!-- //modal 이전비용 계산결과 -->
+
+	<!-- modal 상세옵션 -->
+	<div id="modalOption" class="modal modal-full">
+		<h3 class="modal-tit">상세옵션</h3>
+		<button class="modal-close" onclick="popClose('modalOption');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont">
+			<ul class="list-myoption">
+				<li class="option1 on">썬루프</li>
+				<li class="option2 on">블랙박스</li>
+				<li class="option3">네비게이션</li>
+				<li class="option4">스마트키</li>
+				<li class="option5">후방카메라</li>
+				<li class="option6">가죽시트</li>
+				<li class="option7">에어백</li>
+				<li class="option8">HD 헤드램프</li>
+			</ul>
+			<div class="box-line">
+				<h2 class="tit-sub">기본옵션</h2>
+				<ul class="list-myoption2">
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+				</ul>
+
+				<h2 class="tit-sub">안전장치</h2>
+				<ul class="list-myoption2">
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+				</ul>
+
+				<h2 class="tit-sub">영상/음향</h2>
+				<ul class="list-myoption2">
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+				</ul>
+
+				<h2 class="tit-sub">기타</h2>
+				<ul class="list-myoption2">
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우파워윈도우</li>
+					<li>에어컨</li>
+					<li class="on">파워핸들</li>
+					<li class="on">파워윈도우</li>
+					<li>에어컨</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //modal 상세옵션 -->
+
+	<div class="util-bottom">
+		<div class="btn-group">
+			<a href="01_mycar.html" class="btn btn-default btn-left">목록으로</a>
+			<a href="tel:01012345678" class="btn btn-primary btn-right">전화문의</a>
+		</div>
+	</div>
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물조회</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="hidden">검색결과</h2>
+		<div class="tab-menu tab-3ea">
+			<a href="02_inquiry_result.html" class="on">검색결과</a>
+			<a href="02_inquiry_result2.html">중고차시세</a>
+			<a href="02_inquiry_result3.html">신차가격</a>
+		</div>
+		<div class="info-refult">
+			<em class="txt">[현대]그랜저HG LPG HG300 MODERN</em>
+			<a href="01_inquiry.html" class="btn btn-xsm btn-line-primary">재검색</a>
+		</div>
+
+		<p class="car-result-none"><i class="ico ico-big ico-car"></i>검색된 차량이 없습니다</p>
+
+		<div class="list-util">
+			<p class="tit-sub">총 : <strong class="txt-danger">480</strong>대</p>
+			<button class="btn-ico btn-list on" onclick="listView('list')"><i class="ico ico-lg ico-list">리스트형식으로 보기</i></button>
+			<button class="btn-ico btn-thumb" onclick="listView('thumb')"><i class="ico ico-lg ico-thumb">썸네일형식으로 보기</i></button>
+		</div>
+
+		<!-- 조회결과 -->
+		<ul class="list-car">
+			<li>
+				<div class="img-wrap">
+					<img src="img/@img_car.jpg" class="img-car" alt="">
+				</div>
+				<div class="tit">[현대]그랜저HG LPG HG300 MODERN 그랜저HG LPG HG300 MODERN</div>
+				<ul class="info">
+					<li>2012.01</li>
+					<li>오토</li>
+					<li>휘발유</li>
+					<li>11만km</li>
+				</ul>
+				<span class="hotmark">HOT</span>
+				<span class="hotmark">준신차</span>
+				<span class="hotmark">무사고</span>
+				<div class="price2"><strong>1,100</strong> 만원</div>
+				<a href="01_mycar_detail.html" class="view">매물상세보기</a>
+			</li>
+			<li>
+				<div class="img-wrap">
+					<img src="img/@img_car.jpg" class="img-car" alt="">
+				</div>
+				<div class="tit">[현대]그랜저HG LPG HG300 MODERN 그랜저HG LPG HG300 MODERN</div>
+				<ul class="info">
+					<li>2012.01</li>
+					<li>오토</li>
+					<li>휘발유</li>
+					<li>11만km</li>
+				</ul>
+				<div class="price2"><strong>1,100</strong> 만원</div>
+				<a href="01_mycar_detail.html" class="view">매물상세보기</a>
+			</li>
+			<li>
+				<div class="img-wrap">
+					<img src="img/no_img.png" class="img-car" alt="">
+				</div>
+				<div class="tit">[현대]그랜저HG LPG HG300 MODERN 그랜저HG LPG HG300 MODERN</div>
+				<ul class="info">
+					<li>2012.01</li>
+					<li>오토</li>
+					<li>휘발유</li>
+					<li>11만km</li>
+				</ul>
+				<span class="hotmark">준신차</span>
+				<span class="hotmark">무사고</span>
+				<div class="price2"><strong>1,100</strong> 만원</div>
+				<a href="01_mycar_detail.html" class="view">매물상세보기</a>
+			</li>
+			<li>
+				<div class="img-wrap">
+					<img src="img/@img_car.jpg" class="img-car" alt="">
+				</div>
+				<div class="tit">[현대]그랜저HG LPG HG300 MODERN 그랜저HG LPG HG300 MODERN</div>
+				<ul class="info">
+					<li>2012.01</li>
+					<li>오토</li>
+					<li>휘발유</li>
+					<li>11만km</li>
+				</ul>
+				<div class="price2"><strong>1,100</strong> 만원</div>
+				<a href="01_mycar_detail.html" class="view">매물상세보기</a>
+			</li>
+		</ul>
+		<!-- //조회결과 -->
+
+		<!-- [D] 로딩 -->
+		<img src="img/loading.gif" alt="loading" class="loading">
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

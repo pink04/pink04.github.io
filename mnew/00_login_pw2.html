@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">비밀번호찾기</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<p class="info-box txt-center bg-primary">입력하신 정보와 일치하는 회원을 찾았습니다</p>
+		<div class="info-box txt-center bg-danger txt-danger">
+			<strong class="tit">임시비밀번호 유의사항</strong>
+			<p>임시비밀번호 발급받기를 진행하세요</p>
+			<p>발급된 임시 비밀번호로 로그인 하신 후, <br> 비밀번호를 변경하시길 바랍니다.</p>
+			<p>비밀번호를 변경하지 않고 사용하여 발생하는<br> 문제에 대해서 '카매니저는 책임지지 않습니다'</p>
+			<p>임시 발급된 비밀번호는 최소 6자리 입니다</p>
+		</div>
+
+		<div class="list-form">
+			<table>
+				<caption>비밀번호찾기 결과 회원정보</caption>
+				<colgroup>
+					<col style="width:30%">
+					<col style="width:70%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th scope="row">딜러명</th>
+						<td>홍길*</td>
+					</tr>
+					<tr>
+						<th scope="row">가입일자</th>
+						<td>2011년 11월 11일</td>
+					</tr>
+					<tr>
+						<th scope="row">아이디</th>
+						<td>ADDD**</td>
+					</tr>
+					<tr>
+						<th scope="row">상사명</th>
+						<td>비즈인포*</td>
+					</tr>
+					<tr>
+						<th scope="row">업무</th>
+						<td>알선</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-accent btn-left">임시비밀번호발급</button>
+			<button class="btn btn-primary btn-right">로그인</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

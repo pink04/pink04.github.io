@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물수정 - 내차관리</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="tit-sub">사고유무 수정</h2>
+
+		<div class="list-form">
+			<table>
+				<tr>
+					<th scope="row" rowspan="7">사고내역선택</th>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct1">
+						<label for="checkAcct1">무사고</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct2">
+						<label for="checkAcct2">운전석 단순교환</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct3">
+						<label for="checkAcct3">운전석 문짝교환</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct4">
+						<label for="checkAcct4">조수석 단순교환</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct5">
+						<label for="checkAcct5">조수석 문짝교환</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct6">
+						<label for="checkAcct6">삼박자</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" class="checkbox" id="checkAcct7">
+						<label for="checkAcct7">본넷 단순교환</label>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="history.back()">취소</button>
+			<button class="btn btn-primary btn-right">수정</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

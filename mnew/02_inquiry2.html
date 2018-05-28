@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물조회</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="hidden">빠른검색</h2>
+		<div class="tab-menu">
+			<a href="02_inquiry.html">제조사별검색</a>
+			<a href="02_inquiry2.html" class="on">빠른검색</a>
+		</div>
+
+		<form class="form-box">
+			<select class="select inp-left">
+				<option>제조사</option>
+			</select>
+			<select class="select inp-right">
+				<option>지역</option>
+			</select>
+			<select class="select">
+				<option>단지</option>
+			</select>
+		</form>
+
+		<p class="info-txt-notice">원하는 검색방법에 따라 검색어를 입력하거나 선택하세요</p>
+		<div class="form-box bordered">
+			<div class="item">
+				<label for="inpInq0">차량명</label>
+				<input type="text" class="inp-txt" id="inpInq0">
+			</div>
+			<div class="item">
+				<label for="inpInq1">차량번호</label>
+				<input type="text" class="inp-txt" id="inpInq1">
+			</div>
+			<div class="item">
+				<label for="inpInq2">딜러명</label>
+				<input type="text" class="inp-txt" id="inpInq2">
+			</div>
+			<div class="item">
+				<label for="inpInq3">상사명</label>
+				<input type="text" class="inp-txt" id="inpInq3">
+			</div>
+			<div class="item">
+				<label for="inpInq4">휴대폰번호</label>
+				<input type="text" class="inp-txt" id="inpInq4">
+			</div>
+			<div class="item">
+				<label>옵션</label>
+				<button class="select"></button>
+			</div>
+		</div>
+
+		<!-- [D] 상세검색 선택 -->
+		<ul class="list-slide inquiry">
+			<li>
+				<div class="slb">
+					<div class="selected">주행거리<button class="delete"><i class="ico ico-delete">삭제</i></button>
+						<div class="detail"><i class="ico ico-detail"></i>10만km ~ 50만km<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slb">
+					<div class="selected">미션<button class="delete"><i class="ico ico-delete">삭제</i></button>
+						<div class="detail"><i class="ico ico-detail"></i>오토<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+						<div class="detail"><i class="ico ico-detail"></i>세미오토<button class="delete"><i class="ico ico-delete">삭제</i></button></div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- //contents -->
+
+	<!-- modal 상세검색 -->
+	<div id="modalDetail" class="modal modal-slide">
+		<form class="form-box bordered">
+			<div class="item">
+				<label>연식</label>
+				<button class="select inp-left popOpen" data-popup='{"type":"modalFull","name":"modalDate","callback":""}'>최소연식</button>
+				<button class="select inp-right popOpen" data-popup='{"type":"modalFull","name":"modalDate","callback":""}'>최대연식</button>
+			</div>
+			<div class="item">
+				<label>주행거리</label>
+				<button class="select popOpen" data-popup='{"type":"modalFull","name":"modalDist","callback":""}'>주행거리</button>
+			</div>
+			<div class="item">
+				<label>미션</label>
+				<button class="select popOpen" data-popup='{"type":"modalFull","name":"modalMssn","callback":""}'>미션</button>
+			</div>
+			<div class="item">
+				<label>연료</label>
+				<button class="select popOpen" data-popup='{"type":"modalFull","name":"modalFuel","callback":""}'>연료</button>
+			</div>
+			<div class="item">
+				<label>색상</label>
+				<button class="select popOpen" data-popup='{"type":"modalFull","name":"modalColor","callback":""}'>색상</button>
+			</div>
+			<div class="item">
+				<label>가격</label>
+				<button class="select popOpen" data-popup='{"type":"modalFull","name":"modalPrice","callback":""}'>가격</button>
+			</div>
+			<div class="check">
+				<input type="checkbox" class="checkbox" id="checkDetail0">
+				<label for="checkDetail0">LPG일반</label>
+				<input type="checkbox" class="checkbox" id="checkDetail1">
+				<label for="checkDetail1">무사고</label>
+				<input type="checkbox" class="checkbox" id="checkDetail2">
+				<label for="checkDetail2">가격</label>
+				<input type="checkbox" class="checkbox" id="checkDetail3">
+				<label for="checkDetail3">성능</label>
+			</div>
+		</form>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left">초기화</button>
+			<button class="btn btn-primary btn-right" onclick="popClose('modalDetail')">추가</button>
+		</div>
+	</div>
+	<!-- //modal 상세검색 -->
+
+	<!-- modal 연식 -->
+	<div id="modalDate" class="modal modal-full">
+		<h3 class="modal-tit">최소연식 선택</h3>
+		<button class="modal-close" onclick="popClose('modalDate');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<div class="list-select">
+				<em class="unit">년</em>
+				<ul class="list-left">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear0" name="checkYear" checked="checked">
+						<label for="checkYear0">전체</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear1" name="checkYear">
+						<label for="checkYear1">2017</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear2" name="checkYear">
+						<label for="checkYear2">2016</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear3" name="checkYear">
+						<label for="checkYear3">2015</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear4" name="checkYear">
+						<label for="checkYear4">2014</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear5" name="checkYear">
+						<label for="checkYear5">2013</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear6" name="checkYear">
+						<label for="checkYear6">2012</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear7" name="checkYear">
+						<label for="checkYear7">2011</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear8" name="checkYear">
+						<label for="checkYear8">2010</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkYear9" name="checkYear">
+						<label for="checkYear9">2009</label>
+					</li>
+				</ul>
+				<em class="unit">월</em>
+				<ul class="list-right">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth0" name="checkMonth" checked="checked">
+						<label for="checkMonth0">전체</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth1" name="checkMonth">
+						<label for="checkMonth1">01</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth2" name="checkMonth">
+						<label for="checkMonth2">02</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth3" name="checkMonth">
+						<label for="checkMonth3">03</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth4" name="checkMonth">
+						<label for="checkMonth4">04</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth5" name="checkMonth">
+						<label for="checkMonth5">05</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth6" name="checkMonth">
+						<label for="checkMonth6">06</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth7" name="checkMonth">
+						<label for="checkMonth7">07</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth8" name="checkMonth">
+						<label for="checkMonth8">08</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth9" name="checkMonth">
+						<label for="checkMonth9">09</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth10" name="checkMonth">
+						<label for="checkMonth10">10</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth11" name="checkMonth">
+						<label for="checkMonth11">11</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkMonth12" name="checkMonth">
+						<label for="checkMonth12">12</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalDate')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalDate')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 연식 -->
+
+	<!-- modal 주행거리 -->
+	<div id="modalDist" class="modal modal-full">
+		<h3 class="modal-tit">주행거리 선택</h3>
+		<button class="modal-close" onclick="popClose('modalDist');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<div class="list-select">
+				<em class="unit">부터</em>
+				<ul class="list-left">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist0" name="checkDist">
+						<label for="checkDist0">전체</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist1" name="checkDist">
+						<label for="checkDist1">10만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist2" name="checkDist" checked="checked">
+						<label for="checkDist2">20만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist3" name="checkDist">
+						<label for="checkDist3">30만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist4" name="checkDist">
+						<label for="checkDist4">40만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkDist5" name="checkDist">
+						<label for="checkDist5">50만km</label>
+					</li>
+				</ul>
+				<em class="unit">까지</em>
+				<ul class="list-right">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtDist0" name="checkUtDist">
+						<label for="checkUtDist0">전체</label>
+					</li>
+					<li class="disabled">
+						<input type="radio" class="radio check-onff" id="checkUtDist1" name="checkUtDist" disabled>
+						<label for="checkUtDist1">10만km</label>
+					</li>
+					<li class="disabled">
+						<input type="radio" class="radio check-onff" id="checkUtDist2" name="checkUtDist" disabled>
+						<label for="checkUtDist2">20만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtDist3" name="checkUtDist" checked="checked">
+						<label for="checkUtDist3">30만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtDist4" name="checkUtDist">
+						<label for="checkUtDist4">40만km</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtDist5" name="checkUtDist">
+						<label for="checkUtDist5">50만km</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalDist')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalDist')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 주행거리 -->
+
+	<!-- modal 미션 -->
+	<div id="modalMssn" class="modal modal-full">
+		<h3 class="modal-tit">미션 선택</h3>
+		<button class="modal-close" onclick="popClose('modalMssn');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<ul class="list-checkbox">
+				<li class="all">
+					<input type="checkbox" class="checkbox" id="checkMssn0">
+					<label for="checkMssn0">전체</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMssn1">
+					<label for="checkMssn1">오토</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMssn2">
+					<label for="checkMssn2">수동</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMssn3">
+					<label for="checkMssn3">세미오토</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkMssn4">
+					<label for="checkMssn4">무단변속기</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalMssn')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalMssn')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 미션 -->
+
+	<!-- modal 연료 -->
+	<div id="modalFuel" class="modal modal-full">
+		<h3 class="modal-tit">연료 선택</h3>
+		<button class="modal-close" onclick="popClose('modalFuel');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<ul class="list-checkbox">
+				<li class="all">
+					<input type="checkbox" class="checkbox" id="checkFuel0">
+					<label for="checkFuel0">전체</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel1">
+					<label for="checkFuel1">휘발유</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel2">
+					<label for="checkFuel2">경유</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel3">
+					<label for="checkFuel3">LPG</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel4">
+					<label for="checkFuel4">휘발유&#47;CNG겸</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel5">
+					<label for="checkFuel5">휘발유 하이브리드</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel6">
+					<label for="checkFuel6">LPG 하이브리드</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel7">
+					<label for="checkFuel7">경유 하이브리드</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel8">
+					<label for="checkFuel8">전기</label>
+				</li>
+				<li>
+					<input type="checkbox" class="checkbox" id="checkFuel9">
+					<label for="checkFuel9">CNG</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalFuel')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalFuel')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 연료 -->
+
+	<!-- modal 색상 -->
+	<div id="modalColor" class="modal modal-full">
+		<h3 class="modal-tit">색상 선택</h3>
+		<button class="modal-close" onclick="popClose('modalColor');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<ul class="list-color">
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor0" checked="checked">
+					<label for="checkColor0" class="color0">전체</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor1">
+					<label for="checkColor1" class="color1">검정</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor2">
+					<label for="checkColor2" class="color2">흰색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor3">
+					<label for="checkColor3" class="color3">진주</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor4">
+					<label for="checkColor4" class="color4">갈대</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor5">
+					<label for="checkColor5" class="color5">청색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor6">
+					<label for="checkColor6" class="color6">빨강</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor7">
+					<label for="checkColor7" class="color7">연금</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor8">
+					<label for="checkColor8" class="color8">하늘</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor9">
+					<label for="checkColor9" class="color9">주황</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor10">
+					<label for="checkColor10" class="color10">쥐색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor11">
+					<label for="checkColor11" class="color11">갈색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor12">
+					<label for="checkColor12" class="color12">담녹</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor13">
+					<label for="checkColor13" class="color13">자주</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor14">
+					<label for="checkColor14" class="color14">은색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor15">
+					<label for="checkColor15" class="color15">녹색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor16">
+					<label for="checkColor16" class="color16">보라</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor17">
+					<label for="checkColor17" class="color17">은회</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor18">
+					<label for="checkColor18" class="color18">은하</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor19">
+					<label for="checkColor19" class="color19">금색</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor20">
+					<label for="checkColor20" class="color20">연두</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor21">
+					<label for="checkColor21" class="color21">분홍</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor22">
+					<label for="checkColor22" class="color22">명은</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor23">
+					<label for="checkColor23" class="color23">청옥</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor24">
+					<label for="checkColor24" class="color24">노랑</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor25">
+					<label for="checkColor25" class="color25">흑장미</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor26">
+					<label for="checkColor26" class="color26">베이지</label>
+				</li>
+				<li>
+					<input type="checkbox" class="check-color" id="checkColor27">
+					<label for="checkColor27" class="color27">다크그레이</label>
+				</li>
+			</ul>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalColor')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalColor')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 색상 -->
+
+	<!-- modal 가격 -->
+	<div id="modalPrice" class="modal modal-full">
+		<h3 class="modal-tit">가격 선택</h3>
+		<button class="modal-close" onclick="popClose('modalPrice');"><i class="ico ico-lg ico-close">닫기</i></button>
+
+		<div class="modal-cont btnBottom">
+			<div class="list-select">
+				<em class="unit">부터</em>
+				<ul class="list-left">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice0" name="checkPrice" checked="checked">
+						<label for="checkPrice0">전체</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice1" name="checkPrice">
+						<label for="checkPrice1">100만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice2" name="checkPrice">
+						<label for="checkPrice2">200만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice3" name="checkPrice">
+						<label for="checkPrice3">300만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice4" name="checkPrice">
+						<label for="checkPrice4">400만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice5" name="checkPrice">
+						<label for="checkPrice5">500만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice6" name="checkPrice">
+						<label for="checkPrice6">600만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice7" name="checkPrice">
+						<label for="checkPrice7">700만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkPrice8" name="checkPrice">
+						<label for="checkPrice8">800만원</label>
+					</li>
+				</ul>
+				<em class="unit">까지</em>
+				<ul class="list-right">
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice0" name="checkUtPrice" checked="checked">
+						<label for="checkUtPrice0">전체</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice1" name="checkUtPrice">
+						<label for="checkUtPrice1">100만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice2" name="checkUtPrice">
+						<label for="checkUtPrice2">200만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice3" name="checkUtPrice">
+						<label for="checkUtPrice3">300만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice4" name="checkUtPrice">
+						<label for="checkUtPrice4">400만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice5" name="checkUtPrice">
+						<label for="checkUtPrice5">500만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice6" name="checkUtPrice">
+						<label for="checkUtPrice6">600만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice7" name="checkUtPrice">
+						<label for="checkUtPrice7">700만원</label>
+					</li>
+					<li>
+						<input type="radio" class="radio check-onff" id="checkUtPrice8" name="checkUtPrice">
+						<label for="checkUtPrice8">800만원</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="btn-group">
+			<button class="btn btn-left btn-default" onclick="popClose('modalPrice')">닫기</button>
+			<button class="btn btn-right btn-primary" onclick="popClose('modalPrice')">선택</button>
+		</div>
+	</div>
+	<!-- //modal 가격 -->
+
+	<div class="util-bottom">
+		<div class="btn-group">
+			<button class="btn btn-sm btn-line btn-center popOpen" data-popup='{"type":"modalSlide","name":"modalDetail","callback":""}'>상세검색 <i class="ico ico-plus">더보기</i></button>
+			<button class="btn btn-default btn-left">초기화</button>
+			<a href="02_inquiry_result.html" class="btn btn-primary btn-right">검색</a>
+		</div>
+	</div>
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

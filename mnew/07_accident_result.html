@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/anypicker.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/anypicker.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">사고이력조회 결과</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<div class="info-box">
+			<strong class="txt-primary">00가1234</strong>
+			<span class="fr">조회일 2016-10-11 09:00</span>
+		</div>
+
+		<h2 class="tit-sub">사고이력 요약정보</h2>
+		<ul class="list-summury bordered">
+			<li><em>용도변경</em> 요약정보내용</li>
+			<li><em>번호/소유자변경</em> 요약정보내용</li>
+			<li><em>특수사고</em> 도난 0회 전손 0회 침수 0회</li>
+			<li><em>내차피해</em> <strong class="txt-danger">0</strong>회 <strong class="txt-danger">0</strong>원</li>
+			<li><em>타차피해</em> <strong class="txt-danger">0</strong>회 <strong class="txt-danger">0</strong>원</li>
+		</ul>
+
+		<h2 class="tit-sub">차량기본정보</h2>
+		<ul class="list-summury bordered">
+			<li><em>차명</em> 요약정보내용</li>
+			<li><em>용도</em> </li>
+			<li><em>차종</em> </li>
+			<li><em>연료</em> 휘발유</li>
+			<li><em>미션</em> 오토</li>
+			<li><em>배기량</em> 2700CC</li>
+			<li><em>최초보험가입일</em> 2007년 2월 21일</li>
+		</ul>
+
+		<h2 class="tit-sub">차량기본정보</h2>
+		<ul class="list-summury bordered">
+			<li><em>2012-03-27</em> 번호변경 00가1234 자가용 승용</li>
+			<li><em>2015-12-16</em> 소유자변경</li>
+		</ul>
+
+		<h2 class="tit-sub">자기자동차보험사고이력</h2>
+		<div class="list-table txt-center">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">사고일자</th>
+						<th scope="col">부품</th>
+						<th scope="col">공임</th>
+						<th scope="col">도장</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h2 class="tit-sub">타인재물가해사고이력</h2>
+		<div class="list-table txt-center">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">사고일자</th>
+						<th scope="col">부품</th>
+						<th scope="col">공임</th>
+						<th scope="col">도장</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<h2 class="tit-sub">타인자동차보험사고이력</h2>
+		<div class="list-table txt-center">
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">사고일자</th>
+						<th scope="col">부품</th>
+						<th scope="col">공임</th>
+						<th scope="col">도장</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+					<tr>
+						<td rowspan="2">2008.04.04</td>
+						<td>68,000</td>
+						<td>12,000</td>
+						<td>2,000</td>
+					</tr>
+					<tr>
+						<td>합계</td>
+						<td colspan="2" class="txt-danger">12,000</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<p class="info-txt-notice">이 등본은 자동차등록원부(갑)의 기재사항과 틀림없음을 증명합니다.</p>
+		<div class="info-txt txt-right font-sm">2017-10-10</div>
+		<ul class="info-txt notice border-top p-t-10">
+			<li>열람일시:2015.12.22 오전:9:40:45</li>
+			<li>본 자료는 열람용이므로 출력하여 증명용도로 활용될 수 없습니다.</li>
+		</ul>
+	</div>
+	<!-- //contents -->
+
+	<div class="util-bottom">
+		<div class="btn-group">
+			<button class="btn btn-default btn-left popOpen" data-popup='{"type":"modalSlide","name":"modalFax","callback":"fax"}'>팩스전송</button>
+			<a href="07_accident_inquiry.html" class="btn btn-primary btn-right">다른차량조회</a>
+		</div>
+	</div>
+
+	<!-- 팩스전송팝업 -->
+	<div id="modalFax" class="modal modal-slide">
+		<form class="info-box">
+			<label for="faxNum" class="info-txt-notice m-0">팩스 받으실 분의 번호를 입력하세요</label>
+			<input type="tel" id="faxNum" class="inp-txt m-t-10">
+		</form>
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="popClose();">취소</button>
+			<button class="btn btn-primary btn-right" onclick="popClose();">전송</button>
+		</div>
+	</div>
+	<!-- //팩스전송팝업 -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>

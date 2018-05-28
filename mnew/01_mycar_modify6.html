@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카매니저</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/basic.css">
+	<script src="js/jquery-1.8.2.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/basic.js"></script>
+</head>
+<body>
+<div class="wrap">
+	<!-- header -->
+	<header class="header">
+		<h1 id="docTit" class="tit">매물수정 - 내차관리</h1>
+		<div class="util">
+			<button onclick="history.back()"><i class="ico ico-lg ico-back">이전페이지로 이동</i></button>
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- contents -->
+	<div class="contents">
+		<h2 id="contTit" class="tit-sub">판매가격 수정</h2>
+
+		<div class="list-form">
+			<table>
+				<tr>
+					<th scope="row">판매가격</th>
+					<td>
+						<div class="item item-unit">
+							<input type="number" class="inp-txt txt-right">
+							<span class="unit">만원</span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<ul class="info-txt notice">
+			<li>숫자만 입력하세요</li>
+			<li>사이트에서 보이는 금액입니다</li>
+		</ul>
+
+		<div class="btn-group">
+			<button class="btn btn-default btn-left" onclick="history.back()">취소</button>
+			<button class="btn btn-primary btn-right">수정</button>
+		</div>
+	</div>
+	<!-- //contents -->
+
+	<button class="btn-top">TOP</button>
+</div>
+</body>
+</html>
