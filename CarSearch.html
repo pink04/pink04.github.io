@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>실매물확인</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head> 
+<body>
+	<section>
+		<div id="content">
+			<!--바로가기-->
+			<ul style="background-color:#eee; height:20px;">
+				<li class="fl mr10"><a href="index.html">메인</a></li>
+				<li class="fl mr10"><a href="CarSearch.html">중고차 매물검색</a></li>
+				<li class="fl mr10"><a href="Search.html">중고차 매물검색 상세</a></li>
+				<li class="fl mr10"><a href="SearchDetail.html">중고차 매물검색 특정차량선택</a></li>
+				<li class="fl mr10"><a href="Carcheck.html">중고차 실매물확인</a></li>
+				<li class="fl mr10"><a href="CarPrice.html">중고차 시세확인</a></li>
+			</ul>
+			<div class="section s1">
+				<!--타이틀-->
+				<div class="titGroup">
+					<h2> MY CAR 중고차 매물 검색</h2>
+					<div id="btnGroup">
+						<a class="mr4" href="#" title="컨슈머리포트"><img id="imagebtn01" src="images/common/btn_report.gif" alt="자동차 할부금융에 대한 금감원 컨슈머리포트"></a>
+						<a class="mr4" href="#" title="인쇄하기"><img id="imagebtn02" src="images/common/btn_commonPrint.gif" alt="인쇄하기"></a>
+						<a class="mr4" href="#" title="확대보기"><img id="imagebtn03" src="images/common/btn_commonExpand.gif" alt="확대보기"></a>
+						<a href="#" title="작게보기"><img id="imagebtn04" src="images/common/btn_commonDecrease.gif" alt="작게보기"></a>
+					</div>
+				</div>
+				<!--타이틀 end-->
+				<!--제조사별 검색-->
+				<div class="car_search mt10">
+					<!--검색 왼쪽컨텐츠-->
+					<div class="search_left">
+						<h3>제조사별 검색</h3>
+						<!--탭-->
+						<ul class="tab_tit">
+							<li><a href="#tab1" title="국산차 · 수입차 내용패널로 바로가기" class="selected"> 국산차 </a></li>
+							<li><a href="#tab2" title="화물 · 특장 · 버스 내용패널로 바로가기" > 수입차 </a></li>
+						</ul>
+						
+						<div class="panel">
+							<!--국산차검색 박스-->
+							<div class="tab1">
+								<ul class="tab_box">
+									<li class="manufact_btn"><a href="#"><span>제조사</span></a></li>
+									<li class="model_btn"><a href="#"><span>모델</span></a></li>
+									<li class="submodel_btn"><a href="#"><span>세부모델</span></a></li>
+									<li class="grade_btn"><a href="#"><span>등급</span></a></li>
+								</ul>
+								<!--검색버튼-->
+								<div class="search_btn">
+									<a href="#">검색</a>
+								</div>
+							</div>
+							<!--국산차검색 박스 end-->
+							<!--수입차검색 박스-->
+							<div class="tab2">
+								<ul class="tab_box">
+									<li class="manufact_btn2"><a href="#"><span>제조사2</span></a></li>
+									<li class="model_btn2"><a href="#"><span>모델2</span></a></li>
+									<li class="submodel_btn2"><a href="#"><span>세부모델2</span></a></li>
+									<li class="grade_btn2"><a href="#"><span>등급2</span></a></li>
+								</ul>
+								<!--검색버튼-->
+								<div class="search_btn">
+									<a href="#">검색</a>
+								</div>
+							<!--수입차검색 박스 end-->
+							</div>
+							<!--검색 오른쪽컨텐츠-->
+							<div class="search_right">
+								<div class="count">
+									<h3 class="blind">전체매물</h3>
+									<div class="count_c1">
+										<p><strong>전체 매물</strong><span>90,989</span> 대</p>
+									</div>
+									<div class="count_c2 ml80">
+										<span>국산<strong>33,989</strong> 대</span>
+										<span>수입산<strong>33,989</strong> 대</span>
+									</div>	
+								</div>
+								<div class="recommend">
+									<h3>인기차량</h3>
+									<ul class="ml20">
+										<li><a href="#">[현대]그랜저hg 300 prime</a></li>
+										<li><a href="#">[현대]그랜저hg 300 prime</a></li>
+										<li><a href="#">[현대]그랜저hg 300 prime</a></li>
+										<li><a href="#">[현대]그랜저hg 300 prime</a></li>
+										<li><a href="#">[현대]그랜저hg 300 prime</a></li>
+									</ul>
+								</div>
+							</div>
+							<!--검색 오른쪽컨텐츠 end-->
+							<!--검색 클릭시 제조사 리스트-->
+							<div class="manufact_list" >
+								<div class="text">
+									<span><strong>"제조사"</strong>를 선택하세요.</span>
+								</div>
+								<div class="scr line">
+									<h4>제조사 목록</h4>
+									<ul id="manufact_1st">
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+									</ul>
+									<ul id="manufact_2st">
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+									</ul>
+									<ul id="manufact_3st">
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+										<li><a href="#">기아</a></li>
+										<li><a href="#">쌍용</a></li>
+										<li><a href="#">현대</a></li>
+										<li><a href="#">대우</a></li>
+										<li><a href="#">삼성</a></li>
+									</ul>
+								</div>
+								<!--닫기버튼-->
+								<div class="close">
+									<a href="#"><span>닫기</span></a>
+								</div>
+								<!--닫기버튼 end-->
+							</div>
+							<!--검색 클릭시 제조사 리스트 end-->
+						</div>
+					</div>
+					<!--검색 왼쪽컨텐츠 end-->
+				</div>
+				<!--제조사별 검색 end-->
+			</div>
+			<div class="section s2 ">
+				<!--국산차 리스트-->
+				<div class="cont c1">
+					<h3>국산차</h3>
+					<ul class="carlist01">
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li class="llast">
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+					</ul>	
+				</div>
+				<!--국산차 리스트 end-->
+				<!--수입차 리스트-->
+				<div class="cont c1">
+					<h3>수입차</h3>
+					<ul class="carlist01">
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+						<li class="llast">
+							<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+							<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--수입차 리스트 end-->
+			</div>
+			<div class="section s3">
+				<img src="images/sub/notice_banner.jpg" alt="중고차 매물 검색 서비스는 ㈜KFC에서 제공한 것이며 저작권 및 법적 책임은 ㈜KFC에 있습니다 배너 이미지">
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+	$(function(){
+		$(".panel .tab2").hide();
+		$(".panel .tab1").show();
+
+		$(".tab_tit li:eq(0) a").click(function(){
+			$(".tab_tit li a").removeClass("selected");
+			$(this).addClass("selected");
+			$(".tab2").hide();
+			$(".tab1").show();
+		   return false;
+		});
+		$(".tab_tit li:eq(1) a").click(function(){
+		   $(".tab_tit li a").removeClass("selected");
+		   $(this).addClass("selected");
+		   $(".tab1").hide();
+		   $(".tab2").show();
+		   return false;
+		});
+		$(".manufact_btn").click(function(){
+			$(".manufact_list").show();
+			$(".manufact_list").toggleClass("on");
+		});
+		$(".close").click(function(){
+			$(".manufact_list").hide();
+		});
+
+	});
+	
+</script>
+</body>
+</html>

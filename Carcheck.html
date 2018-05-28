@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>실매물확인</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head> 
+<body>
+	<section>
+		<div id="content">
+			<!--바로가기-->
+			<ul style="background-color:#eee; height:20px;">
+				<li class="fl mr10"><a href="index.html">메인</a></li>
+				<li class="fl mr10"><a href="CarSearch.html">중고차 매물검색</a></li>
+				<li class="fl mr10"><a href="Search.html">중고차 매물검색 상세</a></li>
+				<li class="fl mr10"><a href="SearchDetail.html">중고차 매물검색 특정차량선택</a></li>
+				<li class="fl mr10"><a href="Carcheck.html">중고차 실매물확인</a></li>
+				<li class="fl mr10"><a href="CarPrice.html">중고차 시세확인</a></li>
+			</ul>
+			<div id="contentPrimary">
+				<div class="section s1">
+					<!--타이틀-->
+					<div class="titGroup">
+						<h2> MY CAR 실매물확인</h2>
+						<div id="btnGroup">
+							<a class="mr4" href="#" title="컨슈머리포트"><img id="imagebtn01" src="images/common/btn_report.gif" alt="자동차 할부금융에 대한 금감원 컨슈머리포트"></a>
+							<a class="mr4" href="#" title="인쇄하기"><img id="imagebtn02" src="images/common/btn_commonPrint.gif" alt="인쇄하기"></a>
+							<a class="mr4" href="#" title="확대보기"><img id="imagebtn03" src="images/common/btn_commonExpand.gif" alt="확대보기"></a>
+							<a href="#" title="작게보기"><img id="imagebtn04" src="images/common/btn_commonDecrease.gif" alt="작게보기"></a>
+						</div>
+					</div>
+					<!--타이틀 end-->
+					<div class="car_main">
+						<p>
+							<img src="images/sub/car_confirm_banner.jpg" alt="중고차 실매물 확인">
+						</p>
+					</div>
+				</div>
+				<div class="section s2">
+					<div class="titGroup2">
+						<h2><span class="ml15">차량검색</span></h2>
+					</div>
+					<!--차량검색 왼쪽폼-->
+					<div class="car_search3 mt10">
+						<form class="form-tag">
+							<fieldset>
+								<legend>&#8251; 검색하실 차량번호를 입력하세요.</legend>
+								<div class="entry">
+									<input type="search" value="" id="carnum"/>
+									<label for="carnum"><a href="#">검색하기</a></label>
+								</div>
+							</fieldset>
+						</form>
+					<!--차량검색 왼쪽폼-->
+					<!--차량검색 이용현황-->
+						<div class="status">
+							<h4 class="ml10">이용현황(2015년 11월 기준)</h4>
+							<ul class="box">
+								<li class="all">총 시도 건수</li>
+								<li class="color"><span class="num1">23,000</span> 건</li>
+								<li class="all">총 확인 완료 건수</li>
+								<li class="color"><span class="num2">22,555</span> 건</li>
+								<li class="all">총 미확인 건수</li>
+								<li class="color">455 건</li>
+							</ul>
+						</div>
+					<!--차량검색 이용현황 end-->
+					</div>
+				</div>
+				<div class="section s3">
+					<img src="images/sub/notice_banner.jpg" alt="중고차 매물 검색 서비스는 ㈜KFC에서 제공한 것이며 저작권 및 법적 책임은 ㈜KFC에 있습니다 배너 이미지">
+				</div>
+				<!--차량검색결과-->
+				<div class="section s4">
+					<div class="titGroup2 mt10">
+						<h2><span class="ml15">검색결과</span></h2>
+					</div>
+					<div class="confirm_result mt10">
+						<strong>정상 등록된 차량입니다.</strong>
+						<span>(2015/12/28 기준)</span>
+					</div>
+					<p class="fl mt5">&#8251; 등록된 매매상사에서 판매를 목적으로 매입하여 상품용 차량으로 등록한 차량이 아닌경우</p>
+					<!--차량검색결과 이미지-->
+					<div class="confirm_result_view mt20">
+						<h3>아반떼 MD</h3>
+						<div class="result_img">
+							<img src="images/sub/noimage.jpg" alt="검색된 차량 이미지">
+							<span class="carprice">1,200만원</span>
+							<span class="carnum">31주 3992</span>
+						</div>
+						<p class="result_txt01">이 차량의 현재 위치는 경기도 수원 중앙자동차매매단지입니다.</p>
+						<p class="result_txt02">&#8251; 판매 신고 기준이므로 오차가 있을 수 있습니다.</p>
+						<p class="banking"><a href="#">금융상품조회</a></p>
+					</div>
+					<!--차량검색결과 이미지 end-->
+				</div>
+				<!--차량검색결과 end-->
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,50 @@
+#content{
+		width:740px;
+		font-size:12px;
+		margin:0 auto;
+		padding-bottom:30px;
+	}
+#content:after{
+		content:"";
+		display:block;
+		clear:both;
+	}
+.section.s1{
+		float:left;
+		width:740px;
+	}
+.section.s2, .section.s3, .section.s4{
+		float:left;
+		width:740px;
+		margin-top:10px;
+	}
+#section:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+/**공통**/
+	.hiddenText{text-indent:-10000px;overflow:hidden;}
+	.blind{position:absolute;left:-999%;top:0;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
+	.ac{text-align:center;}
+	.mt5{margin-top:5px;}
+	.mt10{margin-top:10px;}
+	.mt15{margin-top:15px;}
+	.mt20{margin-top:20px;}
+	.mt30{margin-top:30px !important;}
+	.mb10{margin-bottom:10px;}
+	.mb20{margin-bottom:20px;}
+	.mr4{margin-right:4px;}
+	.mr10{margin-right:10px;}
+	.ml5{margin-left:5px;}
+	.ml10{margin-left:10px;}
+	.ml15{margin-left:15px;}
+	.ml20{margin-left:20px;}
+	.ml80{margin-left:80px;}
+	.fl{float:left;}
+	.border0{border:0 none !important;}
+	.borderl0{border-left:0 none !important;}
+	.borderr0{border-right:0 none !important;}
+	.bordert0{border-top:0 none !important;}
+	.borderb0{border-bottom:0 none !important;}
+	.lastbg0{background:0 none !important;}

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>실매물확인</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head> 
+<body>
+	<section>
+		<div id="content">
+			<!--바로가기-->
+			<ul style="background-color:#eee; height:20px;">
+				<li class="fl mr10"><a href="index.html">메인</a></li>
+				<li class="fl mr10"><a href="CarSearch.html">중고차 매물검색</a></li>
+				<li class="fl mr10"><a href="Search.html">중고차 매물검색 상세</a></li>
+				<li class="fl mr10"><a href="SearchDetail.html">중고차 매물검색 특정차량선택</a></li>
+				<li class="fl mr10"><a href="Carcheck.html">중고차 실매물확인</a></li>
+				<li class="fl mr10"><a href="CarPrice.html">중고차 시세확인</a></li>
+			</ul>
+			<div class="section s1">
+				<!--타이틀-->
+				<div class="titGroup">
+					<h2> MY CAR 중고차 시세 확인</h2>
+					<div id="btnGroup">
+						<a class="mr4" href="#" title="컨슈머리포트"><img id="imagebtn01" src="images/common/btn_report.gif" alt="자동차 할부금융에 대한 금감원 컨슈머리포트"></a>
+						<a class="mr4" href="#" title="인쇄하기"><img id="imagebtn02" src="images/common/btn_commonPrint.gif" alt="인쇄하기"></a>
+						<a class="mr4" href="#" title="확대보기"><img id="imagebtn03" src="images/common/btn_commonExpand.gif" alt="확대보기"></a>
+						<a href="#" title="작게보기"><img id="imagebtn04" src="images/common/btn_commonDecrease.gif" alt="작게보기"></a>
+					</div>
+				</div>
+				<!--타이틀 end-->
+				<div class="car_main mb20">
+					<p>
+						<img src="images/sub/car_price_banner.jpg" alt="스마트한 중고차 서비스">
+					</p>
+				</div>
+			</div>
+			<div class="section s2">
+				<!--시세 검색-->
+				<div class="car_price">
+					<div class="titGroup2">
+						<h2><span class="ml15">시세검색</span></h2>
+						<p class="ml15 mt5">검색하신 차량의 최근 연식 기준으로 최대 10년 연식을 보여드립니다.(이하 연식은 누락될 수 있습니다)</p>
+					</div>
+					<!--탭-->
+					<ul class="tab_tit2">
+						<li><a href="#tab3" title="국산차 · 수입차 내용패널로 바로가기" class="selected"> 국산차 </a></li>
+						<li><a href="#tab4" title="화물 · 특장 · 버스 내용패널로 바로가기" > 수입차 </a></li>
+					</ul>
+					<!--시세검색창-->
+					<div class="car_search2">
+						<!--제조사-->
+						<div class="step a1">
+							<h4 class="ac">제조사</h4>
+							<ul class="scr line1" id="pmanufact_ul">
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+							</ul>
+						</div>
+						<!--제조사 end-->
+						<!--모델-->
+						<div class="step a2">
+							<h4 class="ac">모델</h4>
+							<ul class="scr line2" id="pmodelul">
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+								<li><a href="#">기아</a></li>
+								<li><a href="#">쌍용</a></li>
+								<li><a href="#">현대</a></li>
+								<li><a href="#">대우</a></li>
+								<li><a href="#">삼성</a></li>
+							</ul>
+							<div class="select_text" style="display:none;">
+								<p>모델을<br>선택하세요</p>
+							</div>
+						</div>
+						<!--모델 end-->
+						<!--세부모델-->
+						<div class="step a3">
+							<h4 class="ac">세부모델</h4>
+							<ul class="scr line3" id="psubmodel_ul">
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_01"><label for="ch_mdn_01">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_02"><label for="ch_mdn_02">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_03"><label for="ch_mdn_03">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_04"><label for="ch_mdn_04">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_05"><label for="ch_mdn_05">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_06"><label for="ch_mdn_06">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_07"><label for="ch_mdn_07">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_08"><label for="ch_mdn_08">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_09"><label for="ch_mdn_09">뉴 SM3 (신형) (10년~14년)</label></li>
+								<li><input type="checkbox" name="model_no" value="" id="ch_mdn_10"><label for="ch_mdn_10">뉴 SM3 (신형) (10년~14년)</label></li>
+							</ul>
+							<div class="select_text" style="display:none;">
+								<p>세부모델을<br>선택하세요</p>
+							</div>
+						</div>
+						<!--세부모델 end-->
+						<!--등급-->
+						<div class="step a4 border0">
+							<h4 class="ac">등급</h4>
+							<ul class="scr line4" id="pgrade_ul" style="display:none;">
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_01"><label for="ch_gd_01">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_02"><label for="ch_gd_02">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_03"><label for="ch_gd_03">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_04"><label for="ch_gd_04">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_05"><label for="ch_gd_05">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_06"><label for="ch_gd_06">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_07"><label for="ch_gd_07">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_08"><label for="ch_gd_08">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_09"><label for="ch_gd_09">Q1234</label></li>
+								<li><input type="checkbox" name="grade" value="" id="ch_gd_10"><label for="ch_gd_10">Q1234</label></li>
+							</ul>
+							<div class="select_text">
+								<p>등급을<br>선택하세요</p>
+							</div>
+						</div>
+                    <!--등급 end-->
+					</div>
+					<!--시세검색창 end-->
+					<!--검색조건 초기화 / 검색 버튼-->
+					<div class="search_btn2 mt20">
+						<p class="reset"><a href="#">검색조건 초기화</a></p>
+						<p class="searchbtn2"><a href="#">검색</a></p>
+					</div>
+					<!--검색조건 초기화 / 검색 버튼 end-->
+				</div>
+			</div>
+			<!--검색결과창-->
+			<div class="section s3">
+				<div class="titGroup2 mt20">
+					<h2><span class="ml15">검색결과</span></h2>
+				</div>
+				<div class="select_year">
+					<span class="prev"><a href="#">이전버튼</a></span>
+					<span>
+						<select name="year" id="year" title="년별 시세검색">
+							<option value="">2015년 11월 2주차</option>
+							<option value="">2015년 11월 2주차</option>
+							<option value="">2015년 11월 2주차</option>
+							<option value="">2015년 11월 2주차</option>
+						</select>
+					</span>
+					<span class="next"><a href="#">다음버튼</a></span>
+				</div>
+				<table class="price_result"> 
+					<colgroup>
+						<col style="width:148px;"/>
+						<col style="width:49px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+						<col style="width:53px;" />
+					</colgroup>
+					<thead>
+						<tr class="tithead">
+							<th scope="col" rowspan="2" class="borderb">차량정보</th>
+							<th scope="col" rowspan="2">변속기</th>
+							<th scope="col" colspan="10" class="borderr0 borderb">년형(식)별 표준시세</th>
+						 </tr>
+						<tr class="tithead">
+							<th scope="col">2009</th>
+							<th scope="col">2008</th>
+							<th scope="col">2007</th>
+							<th scope="col">2006</th>
+							<th scope="col">2005</th>
+							<th scope="col">2004</th>
+							<th scope="col">2003</th>
+							<th scope="col">2002</th>
+							<th scope="col">2001</th>
+							<th scope="col" class="borderr0">2000</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="titbody">
+							<th scope="row" class="borderb">그랜저Tg<br>등급:Q270 PREMIER</th>
+							<td>오토</td>
+							<td>1020</td>
+							<td>880</td>
+							<td>779</td>
+							<td>745</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td class="borderr0">-</td>
+						</tr>
+					</tbody>
+					<tbody>
+						<tr class="titbody">
+							<th scope="row" class="borderb0">그랜저Tg<br>등급:Q270 PREMIER</th>
+							<td>오토</td>
+							<td>1020</td>
+							<td>880</td>
+							<td>779</td>
+							<td>745</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td>-</td>
+							<td class="borderr0">-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--검색결과창 end-->
+		</div>
+	</section>
+</body>
+</html>

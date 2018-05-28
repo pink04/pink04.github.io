@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>실매물확인</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head> 
+<body>
+	<section>
+		<div id="content">
+			<!--바로가기-->
+			<ul style="background-color:#eee; height:20px;">
+				<li class="fl mr10"><a href="index.html">메인</a></li>
+				<li class="fl mr10"><a href="CarSearch.html">중고차 매물검색</a></li>
+				<li class="fl mr10"><a href="Search.html">중고차 매물검색 상세</a></li>
+				<li class="fl mr10"><a href="SearchDetail.html">중고차 매물검색 특정차량선택</a></li>
+				<li class="fl mr10"><a href="Carcheck.html">중고차 실매물확인</a></li>
+				<li class="fl mr10"><a href="CarPrice.html">중고차 시세확인</a></li>
+			</ul>
+			<div id="contentPrimary">
+				<div class="section s1">
+					<!--타이틀-->
+					<div class="titGroup">
+						<h2> MY CAR 중고차 매물 검색</h2>
+						<div id="btnGroup">
+							<a class="mr4" href="#" title="컨슈머리포트"><img id="imagebtn01" src="images/common/btn_report.gif" alt="자동차 할부금융에 대한 금감원 컨슈머리포트"></a>
+							<a class="mr4" href="#" title="인쇄하기"><img id="imagebtn02" src="images/common/btn_commonPrint.gif" alt="인쇄하기"></a>
+							<a class="mr4" href="#" title="확대보기"><img id="imagebtn03" src="images/common/btn_commonExpand.gif" alt="확대보기"></a>
+							<a href="#" title="작게보기"><img id="imagebtn04" src="images/common/btn_commonDecrease.gif" alt="작게보기"></a>
+						</div>
+					</div>
+					<!--타이틀 end-->
+				</div>
+				<div class="section s2">
+					<div class="titGroup3">
+						<h2 class="mt15"><span><strong>[현대] 그랜저 HG300 PRIME</strong> 검색 차량 결과입니다.</span></h2>
+						<div class="search01_btn01">
+							<span class="search"><a href="#">상세검색</a></span>
+							<span class="present ml5"><a href="#">매물현황</a></span>
+						</div>
+					</div>
+					<div class="subsearch mt5">
+					 <!---------------------#차량검색 3개탭 num01, num02, num03 로 나눠져있음 style=display:none; 으로 숨겨놓음-->
+						<!--차량 검색-->
+						<div class="num01">
+							<div class="search01">
+								<ul class="search01_form">
+									<li>
+										<label>연식</label>
+										<select name="year1_1" id="year1_1" title="년" style="width:70px;">
+											<option value="">년</option>
+											<option value="">2015년</option>
+										</select>
+										<select name="year1_2" id="year1_2" title="월" style="width:70px;">
+											<option value="">월</option>
+											<option value="">1월</option>
+										</select>
+										<span>~</span>
+										<select name="year2_1" id="year2_1" title="년" style="width:70px;">
+											<option value="">년</option>
+											<option value="">2015년</option>
+										</select>
+										<select name="year2_2" id="year2_2" title="월" style="width:70px;">
+											<option value="">월</option>
+											<option value="">1월</option>
+										</select>
+									</li>
+									<li>
+										<label>주행거리</label>
+										<select name="km1_1" id="km1_1" title="km" style="width:70px;">
+											<option value="">km</option>
+											<option value="">2만km</option>
+										</select>
+										<select name="km1_2" id="km1_2" title="km" style="width:70px;">
+											<option value="">km</option>
+											<option value="">2만km</option>
+										</select>
+									</li>
+									<li>
+										<label>세부정보</label>
+										<select name="method" id="method" title="변속기" style="width:95px;">
+											<option value="">변속기</option>
+											<option value="">변속기</option>
+										</select>
+										<select name="fuel" id="fuel" title="연료" style="width:95px;">
+											<option value="">연료</option>
+											<option value="">연료</option>
+										</select>
+										<span>~</span>
+										<select name="car_color" id="car_color" title="색상" style="width:95px;">
+											<option value="">색상</option>
+											<option value="">색상</option>
+										</select>
+									</li>
+									<li>
+										<label>가격</label>
+										<select name="price1_1" id="price1_1" title="가격" style="width:70px;">
+											<option value="">가격</option>
+											<option value="">100만원</option>
+										</select>
+										<select name="price1_2" id="price1_2" title="가격" style="width:70px;">
+											<option value="">가격</option>
+											<option value="">100만원</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<div class="search01_btn02 mt10">
+								<span class="reset "><a href="#">선택초기화</a></span>
+								<span class="subclose ml5"><a href="#">상세검색 닫기</a></span>
+								<span class="research"><a href="#">차량검색</a></span>
+							</div>
+						</div>
+						<!--차량 검색 end-->
+						<!--차량 검색결과-->
+						<div class="num02" style="display:none;">
+							<table class="result01" summary="차량 검색결과">
+								<tbody>
+									<colgroup>
+										<col style="width:22%"/>
+										<col style="width:11%"/>
+										<col style="width:22%"/>
+										<col style="width:11%"/>
+										<col style="width:23%"/>
+										<col style="width:11%"/>
+									</colgroup>
+									 <tr>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+									</tr>
+									<tr>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+									</tr>
+									 <tr>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+									</tr>
+									 <tr>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+										<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+										<td><strong>1,500~1,700</strong></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="search01_btn02 mt10">
+								<span class="close"><a href="#">매물현황 닫기</a></span>
+								<span class="research"><a href="#">차량재검색</a></span>
+							</div>
+						</div>
+						<!--차량 검색결과 end-->
+						<!--차량 검색결과-->
+						<div class="num03" style="display:none;">
+							<p>&#8251; 세부모델까지 선택하여야 매물현황 검색이 가능합니다.</p>
+							<div class="search01_btn02 mt10">
+								<span class="close"><a href="#">매물현황 닫기</a></span>
+								<span class="research"><a href="#">차량재검색</a></span>
+							</div>
+						</div>
+						<!--차량 검색결과 end-->
+					</div>
+				</div>
+				<div class="section s3">
+					<!--자동차 리스트-->
+					<div class="cont c1">
+						<div class="carlist_tit">
+							<h3 class="border0">검색결과 : <strong>65</strong>대</h3>
+							<div class="order">
+								<span class="mr10"><a href="#">최근 등록순</a></span>
+								<span class="mr10"><a href="#">높은 가격순</a></span>
+								<span><a href="#">낮은 가격순</a></span>
+							</div>
+						</div>
+						<ul class="carlist01">
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li class="llast">
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li>
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+							<li class="llast">
+								<a href="#"><img src="images/sub/lcar.jpg" alt="차량 이미지">
+								<p>[현대] <strong>그랜져 TG Q270 기본형</strong></p>
+								<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+								<span>가솔린</span><span>은색</span></p>
+								<span><strong class="pcolor">500</strong> 만원 <span class="location">경기/부천</span></span>
+								</a>
+							</li>
+						</ul>  
+					</div>
+					<!--자동차 리스트 end-->
+					<!--페이징-->
+					<div class="paging">
+						<span class="p_first"><a href="#">처음으로</a></span>
+						<span class="p_prev"><a href="#">이전</a></span>
+						<span><a href="#">1</a></span>
+						<span><a href="#">2</a></span>
+						<span><a href="#">3</a></span>
+						<span><a href="#">4</a></span>
+						<span><a href="#" class="lastbg0">5</a></span>
+						<span class="p_next"><a href="#">다음</a></span>
+						<span class="p_last"><a href="#">마지막으로</a></span>
+						<span class="ordersearch lastbg0"><a href="#">다른차량검색</a></span>
+					</div>
+					<!--페이징 end-->
+				</div>
+				<div class="section s4 mt30">
+					<img src="images/sub/notice_banner.jpg" alt="중고차 매물 검색 서비스는 ㈜KFC에서 제공한 것이며 저작권 및 법적 책임은 ㈜KFC에 있습니다 배너 이미지">
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

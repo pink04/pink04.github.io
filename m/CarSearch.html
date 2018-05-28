@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, user-scalable=no">
+<title> 실매물확인 </title>
+<link rel="stylesheet" type="text/css" href="mobile/css/common.css" />
+<link rel="stylesheet" type="text/css" href="mobile/css/s_main.css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui"></script>
+</head>
+<body>
+<em class="badgeArea">
+	<span class="badge"><a href="index.html">메인</a></span>
+	<span class="badge"><a href="CarPrice.html">시세확인</a></span>
+	<span class="badge"><a href="CarPrice_result.html">시세확인_2</a></span>
+	<span class="badge"><a href="CarCheck.html">실매물확인</a></span>
+	<span class="badge"><a href="CarCheck_result.html">실매물확인_2</a></span>
+	<span class="badge"><a href="popup.html">팝업</a></span>
+</em>
+<!-- container -->
+<div id="container">
+	<!-- detailwrap -->
+	<div class="detailwrap">
+		<!--상품상단-->
+		<em class="badgeArea">
+			<span class="badge">모바일</span>
+			<span class="badge">인터넷</span>
+		</em>
+		<!--//상품상단-->
+		<!--상품타이틀-->
+		<div class="tit mt15 pb10">
+			<h3 class="tit_Line">중고차 매물검색</h3>
+		</div>
+		<!--//상품타이틀-->
+		<!-- 차량검색 -->
+		<div class="price_search">
+			<h3 class="blind">차량검색</h3>
+			<p class="mb10">&#8251; 실매물로 확인되고 현재 판매중인 매물을 제공합니다.</p>
+			<!-- 매물대수 -->
+			<div class="count mb5">
+				<div class="count_c1">
+					<p><strong>전체 매물</strong><span>90,989</span> 대</p>
+				</div>
+				<div class="count_c2 ml80">
+					<p>국산차<strong>33,989</strong> 대</p>
+					<p>수입차<strong>33,989</strong> 대</p>
+				</div>	
+			</div>	
+			<!-- //매물대수 -->
+			<!-- 탭 -->
+			<ul class="tab_tit">
+				<li class="selected"><a href="#tab1" title="국산차 내용패널로 바로가기"> 국산차 </a></li>
+				<li><a href="#tab2" title="수입차 내용패널로 바로가기" > 수입차 </a></li>
+			</ul>
+			<!-- //탭 -->
+			<!-- 검색 패널 -->
+			<div class="panel">
+				<div class="wrap">
+					<button type="button">제조사</button>
+					<button type="button">모델</button>
+					<button type="button">세부모델</button>
+					<button type="button">등급</button>
+				</div>
+				<div class="btn">
+					<button class="search" type="button">검색</button>
+				</div>
+			</div>
+			<!-- //검색 패널 -->
+		</div>
+		<!-- //차량검색 -->
+		<!-- 상세검색 -->
+		<div class="detail_search">
+			<h3 class="blind">차량 상세검색</h3>
+			<!-- 버튼 -->
+			<div class="btnwrap01 mb10">
+				<div class="btn">
+					<span><button class="reset" type="button">상세검색</button></span>
+					<span><button class="search" type="button">매물현황</button></span>
+				</div>
+			</div>
+			<div class="btnwrap02 mb10">
+				<span class="btn"><button class="search2" type="button">다른차량검색</button></span>
+			</div>
+			<!-- //버튼 -->
+			<!-- 상세검색 폼 -->
+			<div class="num01">
+				<ul class="search01_form">
+					<li>
+						<label>연식</label>
+						<span class="box"><button type="button" onclick="" id="" >년</button></span>
+						<span class="txt">~</span>
+						<span class="box"><button type="button" onclick="" id="" >년</button></span>
+					</li>
+					<li>
+						<label>주행거리</label>
+						<span class="box"><button type="button" onclick="" id="" >km</button></span>
+						<span class="txt">~</span>
+						<span class="box"><button type="button" onclick="" id="" >km</button></span>
+					</li>
+					<li>
+						<label>세부정보</label>
+						<span class="box2"><button type="button" onclick="" id="" >변속기</button></span>
+						<span class="box2"><button type="button" onclick="" id="" >연료</button></span>
+						<span class="box2"><button type="button" onclick="" id="" >색상</button></span>
+					</li>
+					<li>
+						<label>가격</label>
+						<span class="box"><button type="button" onclick="" id="" >가격</button></span>
+						<span class="txt">~</span>
+						<span class="box"><button type="button" onclick="" id="" >가격</button></span>
+					</li>
+					<li>
+						<label>지역</label>
+						<span class="box"><button type="button" onclick="" id="" >지역</button></span>
+					</li>
+					<li class="btn">
+						<span><button class="reset" type="button">닫기</button></span>
+						<span><button class="reset" type="button">초기화</button></span>
+						<span><button class="search" type="button">차량검색</button></span>
+					</li>
+				</ul>
+			</div>
+			<!-- //상세검색 폼 -->
+			<!-- 매물현황 폼 -->
+			<div class="num01">
+				<div class="status_form">
+					<table class="car_info mt0" summary="차량 검색결과">
+						<colgroup>
+							<col style="width:70%"/>
+							<col style="width:30%"/>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+								<td><strong class="txt_red">1,500~1,700</strong></td>
+							</tr>
+							<tr>
+								<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+								<td><strong class="txt_red">1,500~1,700</strong></td>
+							</tr>
+							<tr>
+								<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+								<td><strong class="txt_red">1,500~1,700</strong></td>
+							</tr>
+							<tr>
+								<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+								<td><strong class="txt_red">1,500~1,700</strong></td>
+							</tr>
+							<tr>
+								<th scope="row"><a href="#">HG240 LUXURY (10대)</a></th>
+								<td><strong class="txt_red">1,500~1,700</strong></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="btn esc">
+						<button class="reset" type="button">닫기</button>
+					</div>
+				</div>
+			</div>
+			<!-- //매물현황 폼 -->
+			<!-- 국산차량 리스트 -->
+			<div class="num02">
+				<!-- <h4>국산차</h4> -->
+				<!-- 검색결과 리스트에서 h4 태그 이걸로 보여주세요 -->
+				<h4 >검색결과 : <strong>65</strong>대 
+					<span class="list_order">
+						<button type="button" onclick="" id="" >최근등록순</button>
+					</span>
+				</h4>
+				<div class="wrap scroll_g">
+					<ul class="carlist01">
+						<li>
+							<a href="#">
+							<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+							<p><strong>[현대] 그랜져</strong><span class="ellipsis">TG Q270 기본형TG Q270 기본형TG Q270 기본형TG Q270 기본형aaaaaaaaddda</span></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+							<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+							<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+							<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+							<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+							<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+							<span>가솔린</span><span>은색</span></p>
+							<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+							</a>
+						</li>
+					</ul>
+					<div class="view">
+						<span class="more_view"><a href="#">더보기▼</a></span>
+						<span class="top_view"><a href="#">top▲</a></span>
+					</div>
+				</div>
+			</div>
+			<!-- //국산차량 리스트 -->
+			<!-- 수입차량 리스트 -->
+			<div class="num02">
+				<h4>수입차</h4>
+				<ul class="carlist01">
+					<li>
+						<a href="#">
+						<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+						<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+						<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+						<span>가솔린</span><span>은색</span></p>
+						<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+						<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+						<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+						<span>가솔린</span><span>은색</span></p>
+						<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+						<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+						<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+						<span>가솔린</span><span>은색</span></p>
+						<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+						<p class="thumb_img"><img src="mobile/images/lcar01.jpg" alt="차량 이미지"></p>
+						<p><strong>[현대] 그랜져</strong><span>TG Q270 기본형</span></p>
+						<p class="detail"><span>2005.12</span><span>12만 km 오토</span><br>
+						<span>가솔린</span><span>은색</span></p>
+						<span class="price"><strong class="pcolor">500</strong> 만원 <span>경기/부천</span></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- //수입차량 리스트 -->
+			
+		</div>
+		<!-- //상세검색 -->
+		<!-- 배너 -->
+		<div class="banner mt10" style="display:none";>
+			<span class="txt01"><img src="mobile/images/banner01.jpg" alt="mycar 대출을 들어보셨나요? 최저 연4.16%부터 배너"></span>
+		</div>
+		<!-- /배너 -->
+		<!-- 배너 -->
+		<div class="banner mt10" style="display:none";>
+			<strong class="tit">NOTICE</strong>
+			<p>
+				<span>※ 중고차 시세 확인 서비스는 나이스지니데이타㈜에서 제공한 것이며 저작권 및 법적 책임은 나이스지니데이타㈜에 있습니다.<br/></span>
+				<span>서비스 관련 문의: 나이스지니데이타㈜ 02-2122-4800</span>
+			</p>
+		</div>
+		<!-- /배너 -->
+	</div>
+	<!-- //detailwrap -->
+</div>
+</body>
+</html>
+
